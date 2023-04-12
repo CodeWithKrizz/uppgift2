@@ -29,6 +29,8 @@ main {
     justify-content: flex-end;
     padding: 10px;
 }
+
+
 /* 
 .add-to-cart input {
     width: 40px;
@@ -37,4 +39,62 @@ main {
 
 footer {
     margin-top: auto;
+    padding: 50px 0;
 }
+
+  footer h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  footer p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 15px;
+  }
+  
+  footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  footer ul li {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
+  
+  footer ul li i {
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  footer hr {
+    border-color: rgba(255,255,255,0.3);
+    margin: 40px 0;
+  }
+  
+  footer p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  footer .list-unstyled li a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 767px) {
+    footer .col-md-4 {
+      margin-bottom: 30px;
+    }
+  }
+  
