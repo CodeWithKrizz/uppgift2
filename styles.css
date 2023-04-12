@@ -23,6 +23,16 @@ main {
     margin-bottom: 100px;
 }
 
+.add-to-cart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+}
+/* 
+.add-to-cart input {
+    width: 40px;
+} */
 
 
 footer {
