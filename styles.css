@@ -14,9 +14,16 @@ body {
     min-height: 100%;
 }
 
+.nav-item i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
 main {
     margin-bottom: 100px;
 }
+
+
 
 footer {
     margin-top: auto;
