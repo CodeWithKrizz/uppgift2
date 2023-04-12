@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,6 +32,10 @@ main {
     padding: 10px;
 }
 
+.aperture-h1 {
+    color: red;
+    font-size: 10rem
+}
 
 /* 
 .add-to-cart input {
