@@ -33,7 +33,11 @@ main {
 .add-to-cart input {
     width: 40px;
 } */
-
+h1 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
 
 footer {
     margin-top: auto;
