@@ -15,12 +15,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="stylesheet" href="styles.css">
-    <title>Shoppung List</title>
+    <title>Aperture Avenue</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed z-1 container-fluid">
+        <nav class="navbar navbar-expand-lg position-fixed z-1 container-fluid">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">Aperture Avenue</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active_link" aria-current="page" href="#">Home</a>  <!-- ADD Active via JS -->
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Features</a>
@@ -49,10 +49,9 @@
       </header>
       
 
-    <main>
+      <section>
         <!-- Banner -->
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <h1 class="aperture-h1">Aperture Avenue</h1>
+        <div id="carouselExampleCaptions" class="carousel slide mb-5">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -90,8 +89,10 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        </main>
-
+        </section>
+        
+        <h1>Aperture Avenue</h1>
+        
 
         <!-- Cards -->
         <main>
@@ -102,9 +103,9 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="add-to-cart">
+                  <div class="add-to-cart d-grid gap-2">
                     <!-- <input type="number"><i class="fas fa-cart-plus fa-lg"></i> -->
-                    <i class="fas fa-cart-plus fa-lg"></i>
+                    <button class="btn btn-primary" type="button">Add to Cart <i class="fas fa-cart-plus fa-lg"></i></button>
                   </div>
                 </div>
               </div>
@@ -115,8 +116,8 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="add-to-cart">
-                    <i class="fas fa-cart-plus fa-lg"></i>
+                  <div class="add-to-cart d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Add to Cart <i class="fas fa-cart-plus fa-lg"></i></button>
                   </div>
                 </div>
               </div>
@@ -127,8 +128,8 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                  <div class="add-to-cart">
-                    <i class="fas fa-cart-plus fa-lg"></i>
+                  <div class="add-to-cart d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Add to Cart <i class="fas fa-cart-plus fa-lg"></i></button>
                   </div>
                 </div>
               </div>
@@ -139,8 +140,8 @@
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="add-to-cart">
-                    <i class="fas fa-cart-plus fa-lg"></i>
+                  <div class="add-to-cart d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Add to Cart <i class="fas fa-cart-plus fa-lg"></i></button>
                   </div>
                 </div>
               </div>
@@ -151,8 +152,8 @@
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="add-to-cart">
-                        <i class="fas fa-cart-plus fa-lg"></i>
+                    <div class="add-to-cart d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Add to Cart <i class="fas fa-cart-plus fa-lg"></i></button>
                       </div>
                   </div>
                 </div>
@@ -163,8 +164,8 @@
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="add-to-cart">
-                        <i class="fas fa-cart-plus fa-lg"></i>
+                    <div class="add-to-cart d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Add to Cart <i class="fas fa-cart-plus fa-lg"></i></button>
                     </div>
                   </div>
                 </div>
@@ -172,7 +173,7 @@
           </div>
     </main>
     
-    <footer class="bg-dark text-white">
+    <footer class="">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
