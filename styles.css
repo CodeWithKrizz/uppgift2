@@ -16,13 +16,16 @@ html {
 }
 
 body {
-    background-color: #F0F0F0; /* or #eee??? */
+    background-color: #1c1c1c; /* or #eee??? */
     font-family: "Montserrat", sans-serif;
     min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+}
+h1 {
+    color: #E0C097;
 }
 
 nav {
@@ -61,6 +64,20 @@ nav {
 main {
     margin-bottom: 100px;
 }
+
+.card {
+    background-color: #F0F0F0;
+}
+
+.card .btn {
+    background-color: #2D2424;
+    border: none;
+}
+
+/* KOLLA SEN */
+.card .btn:hover{
+    background-color:  #5b4747 ;
+} 
 
 .shopping-cart-circle-number-container {
   position: relative;
