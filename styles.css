@@ -79,60 +79,45 @@ main {
     background-color:  #5b4747 ;
 } 
 
-.shopping-cart-circle-number-container {
-  position: relative;
-  top: 10px;
-  right: 35px;
+.btn .bag {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
-/* .shopping-cart-button {
-    background-color: #E0C097;
-} */
+.wrap_button{
+    height: 80%;
+}
 
-.shopping-cart-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .shopping-cart-circle {
-    width: 15px;
-    height: 15px;
+div .circle {
+    background-color: #F0F0F0;
+    width: 1rem;
+    aspect-ratio: 1;
     border-radius: 50%;
-    background-color: red;
-    margin-left: 0px;
-  }
-  
-  .shopping-cart-number {
+    font-size: 10px;
+    position: relative;
+    top: 15px;
+    left: 25px;
+}
+
+.orderAmount{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    color: var(--white-text-color);
-    font-size: 10px;
-    height: 100%;
-  }
-
-  .latest-post h3, .latest-post ul {
+}
+.latest-post h3, .latest-post ul {
     margin-left: 50px;
-  }
+}
 
-  .shopping-cart-container .shopping-cart-number p {
-    margin: 0 5px 0 0;
-  }
-  
-  .shopping-cart-container .shopping-cart-circle,
-  .shopping-cart-container .shopping-cart-number {
-    margin-left: 4px;
-  }
-
-  .card-title {
+.card-title {
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .price-span {
+.price-span {
     font-size: 0.75rem;
     margin-right: 10px;
-  }
+}
 
 h1 {
     text-align: center;
