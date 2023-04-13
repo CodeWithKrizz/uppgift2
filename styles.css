@@ -89,6 +89,10 @@ main {
     height: 100%;
   }
 
+  .latest-post h3, .latest-post ul {
+    margin-left: 50px;
+  }
+
   .shopping-cart-container .shopping-cart-number p {
     margin: 0 5px 0 0;
   }
