@@ -36,8 +36,16 @@ nav {
 
 }
 
+.navbar-nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar-nav {
-    margin: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-link {
@@ -82,7 +90,7 @@ main {
     height: 15px;
     border-radius: 50%;
     background-color: red;
-    margin-left: 0px;
+    margin: 0px;
   }
   
   .shopping-cart-number {
@@ -94,9 +102,34 @@ main {
     height: 100%;
   }
 
-  .latest-post h3, .latest-post ul {
-    margin-left: 50px;
+  .latest-post h3, .latest-post ul, .follow-us {
+    width: 50%;
   }
+
+  .latest-post {
+    display: inline-block;
+  }
+
+  .follow-us {
+    float: right;
+    margin-top: 15px;
+  }
+
+  /* .left {
+    display: inline;
+    float: left;
+  }
+
+  .right {
+    display: inline;
+    float: right;
+  } */
+
+  .follow-us h3, .follow-us ul{
+   width: 100%;
+  }
+
+
 
   .shopping-cart-container .shopping-cart-number p {
     margin: 0 5px 0 0;
