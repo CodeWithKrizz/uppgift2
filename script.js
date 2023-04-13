@@ -4,7 +4,7 @@ const listItems = [
     {
         "name": "Leica II",
         "id": "leica",
-        "description": "The Leica II is a vintage 35mm rangefinder camera that was produced by Leica from 1932 to 1948. It features interchangeable lenses, a rangefinder focusing system, and a built-in viewfinder. Known for its superior optics, craftsmanship, and historical significance, the Leica II is highly collectible and can be quite expensive.",
+        "description": "The Leica II is a classic 35mm rangefinder camera made by Leica between 1932-1948. It showcases swappable lenses, a rangefinder focus mechanism, and an integrated viewfinder. Recognized for top-notch optics, workmanship, and historic value, the Leica II is very collectible and might be costly.",
         "price": 27499,
         "unit": "$"
     },
@@ -18,21 +18,21 @@ const listItems = [
     {
         "name": "Reflekta II",
         "id": "reflekta",
-        "description": "The Reflekta II is a vintage folding camera made by Wirgin in the 1950s. It uses 120 roll film, has a fixed 105mm lens with f/4.5 aperture and a 1/200th shutter speed. The camera also has a built-in extinction meter for exposure settings.",
+        "description": "The Reflekta II is an old folding camera created by Wirgin during the 1950s. It utilizes 120 roll film, features a set 105mm lens with f/4.5 aperture and a 1/200th shutter pace. The device also includes an integrated extinction meter for exposure adjustments. Reflekta II is a favorite among vintage camera collectors.",
         "price": 2499,
         "unit": "$"
     },
     {
         "name": "Nikon D7500",
         "id": "nikon",
-        "description": "The Nikon D7500 is a powerful DSLR camera designed for enthusiasts and professionals alike. It features a 20.9 megapixel sensor, 51-point autofocus system, and ISO range of 100-51,200. The camera can shoot at up to 8 frames per second and records 4K UHD video at 30 frames per second. It also has built-in Wi-Fi and Bluetooth connectivity, making it easy to transfer photos and videos to your mobile device or computer.",
+        "description": "The Nikon D7500 is a remarkable DSLR camera for enthusiasts and pros. It features a 20.9MP sensor, 51-point AF system, and ISO range of 100-51,200. The camera can shoot at 8fps and records 4K UHD video at 30fps. Plus, it has built-in Wi-Fi and Bluetooth, easing photo/video transfer to devices.",
         "price": 1099,
         "unit": "$"
     },
     {
         "name": "Fujifilm X-10",
         "id": "fujifilm",
-        "description": "The Fujifilm X-10 is a high-quality compact camera with a 12 megapixel sensor, fast Fujinon lens with 4x optical zoom, and intuitive manual controls. It also features OIS, Full HD video recording, and high-speed continuous shooting.",
+        "description": "The Fujifilm X-10, a superb compact camera, boasts a 12MP sensor, speedy Fujinon lens offering 4x optical zoom, and user-friendly manual settings. Additionally, it includes OIS, Full HD video capabilities, and swift continuous shooting functionality.",
         "price": 449,
         "unit": "$"
     },
