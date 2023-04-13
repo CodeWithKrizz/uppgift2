@@ -24,15 +24,15 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg position-fixed z-1 container-fluid">
-            <div class="container-fluid">
-                <a class="navbar-brand text-light" href="#"><img src="images/AA-logo2.png"></a>
+        <nav class="navbar navbar-expand-lg position-fixed container-fluid">
+            <div class="container-fluid justify-content-between">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand text-light ms-5" href="#"><img src="images/AA-logo2.png"></a>
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">Home</a>
                             <!-- ADD Active via JS -->
@@ -68,9 +68,10 @@
     </header>
 
 
+
     <section>
         <!-- Banner -->
-        <div id="carouselExampleCaptions" class="carousel slide mb-5">
+        <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -102,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            <button class="carousel-control-prev z--1" type="button" data-bs-target="#carouselExampleCaptions"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
