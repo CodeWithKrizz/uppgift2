@@ -3,216 +3,152 @@
     --brown-text-color: #E0C097;
     --background-color: #2D2424;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
-
 html {
     height: 100%;
 }
-
 body {
-    background-color: #F0F0F0; /* or #eee??? */
+    background-color: #1c1c1c; /* or #eee??? */
     font-family: "Montserrat", sans-serif;
     min-height: 100%;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
-
+h1 {
+    color: #E0C097;
+}
 nav {
     background-color: #2D2424;
     color: var(--brown-text-color);
     z-index: 1;
 }
-
 .navbar-brand img {
     width: 3rem;
-
 }
-
-.navbar-nav li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 40px;
 }
-
 .nav-link {
     color: var(--white-text-color);
 }
-
 .nav-link:hover {
     color: var(--brown-text-color);
     transition: color 0.3s ease-in;
 }
-
 .navbar-nav .active-link {
     color: var(--brown-text-color);
 }
-
 .nav-item i {
     font-size: 1.5rem;
     margin-right: 20px;
 }
-
 main {
     margin-bottom: 100px;
 }
-
-.shopping-cart-circle-number-container {
-  position: relative;
-  top: 10px;
-  right: 35px;
+.card {
+    background-color: #F0F0F0;
 }
-
-/* .shopping-cart-button {
-    background-color: #E0C097;
-} */
-
-.shopping-cart-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .shopping-cart-circle {
-    width: 15px;
-    height: 15px;
+.card .btn {
+    background-color: #2D2424;
+    border: none;
+}
+/* KOLLA SEN */
+.card .btn:hover{
+    background-color:  #5b4747 ;
+} 
+.btn .bag {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.wrap_button{
+    height: 80%;
+}
+div .circle {
+    background-color: #F0F0F0;
+    width: 1rem;
+    aspect-ratio: 1;
     border-radius: 50%;
-    background-color: red;
-    margin: 0px;
-  }
-  
-  .shopping-cart-number {
+    font-size: 10px;
+    position: relative;
+    top: 15px;
+    left: 25px;
+}
+.orderAmount{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    color: var(--white-text-color);
-    font-size: 10px;
-    height: 100%;
-  }
-
-  .latest-post h3, .latest-post ul, .follow-us {
-    width: 50%;
-  }
-
-  .latest-post {
-    display: inline-block;
-  }
-
-  .follow-us {
-    float: right;
-    margin-top: 15px;
-  }
-
-  /* .left {
-    display: inline;
-    float: left;
-  }
-
-  .right {
-    display: inline;
-    float: right;
-  } */
-
-  .follow-us h3, .follow-us ul{
-   width: 100%;
-  }
-
-
-
-  .shopping-cart-container .shopping-cart-number p {
-    margin: 0 5px 0 0;
-  }
-  
-  .shopping-cart-container .shopping-cart-circle,
-  .shopping-cart-container .shopping-cart-number {
-    margin-left: 4px;
-  }
-
-  .card-title {
+}
+.latest-post h3, .latest-post ul {
+    margin-left: 50px;
+}
+.card-title {
     display: flex;
     justify-content: space-between;
-  }
-
-  .price-span {
+}
+.price-span {
     font-size: 0.75rem;
     margin-right: 10px;
-  }
-
+}
 h1 {
     text-align: center;
     font-weight: 900;
 }
-
 footer {
     margin-top: auto;
     padding: 50px 0;
     background-color: var(--background-color);
     color: var(--brown-text-color);
 }
-
 footer h3 {
     color: var(--brown-text-color);
     font-size: 1.5rem;
 }
-
 footer p {
     color: var(--white-text-color);
     font-size: 1rem;
     line-height: 1.5;
     margin: 0 0 15px;
 }
-
 footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 footer ul li {
     color: var(--white-text-color);
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 10px;
 }
-
 footer ul li i {
     margin-right: 10px;
     color: var(--white-text-color);
 }
-
 footer a {
     color: var(--white-text-color);
     text-decoration: none;
     font-size: 16px;
 }
-
 footer hr {
     border-color: rgba(255, 255, 255, 0.3);
     margin: 40px 0;
 }
-
 footer p:last-of-type {
     margin-bottom: 0;
 }
-
 footer .list-unstyled li a:hover {
     text-decoration: underline;
 }
-
 @media (max-width: 767px) {
     footer .col-md-4 {
         margin-bottom: 30px;
     }
 }
+

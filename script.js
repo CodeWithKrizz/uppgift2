@@ -1,4 +1,3 @@
-
 // JS-kod att utgå från i denna inlämningsuppgift
 const listItems = [
     {
@@ -44,31 +43,24 @@ const listItems = [
         "unit": "$"
     }
 ];
-
 // let shoppingList = {};
-
 // function initShoppingList() {
 //     for (let listItem of listItems) {
 //         console.log(listItem);
 //         shoppingList[listItem.name] = 0;
 //     }
 // }
-
 window.onload = function() {    
     // funktioner anropas här
     initShoppingList();
 }
 // Slut på JS-koden att utgå från.
-
-
 // FUCK sån där konstig loop som bara är förvirrande -_- <-----------------------!
 // Fråga till gruppen: Ska vi göra vår egen istället? Man måste väl inte ta deras kod eller?
-
 // Normal for-loop
 let shoppingList = {};
 let cardTitle = document.querySelectorAll(".card-title");
 let cardDescription = document.querySelectorAll(".card-description")
-
 function initShoppingList() {
     for (let i = 0; i < listItems.length; i++) {
         console.log(listItems[i])
@@ -80,44 +72,11 @@ function initShoppingList() {
         console.log(cardTitle[i])
     }
 }
-
-
 // for (let i = 0; i < cardTitle.length; i++) {
 //     cardTitle[i].innerHTML = 
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Detta skapar en variabel med alla navigations länkar och loopar igenom dem. För varje klick på en länk, så ska en funktion kallas på som utför koden: att loopa igenom alla element och ta bort klassnamnet .active-link för varje gång en navlänk klickas på och sen ska samma klass läggas till på just den länken som det klickades på. På så sätt ser vi till så att bara ett element kan ha klassen .active-link åt gången. // Jessica
 let navLink = document.querySelectorAll(".nav-link")
-
 for (let i = 0; i < navLink.length; i++) {
     navLink[i].addEventListener("click", function () {
         for (let j = 0; j < navLink.length; j++) {
@@ -126,4 +85,3 @@ for (let i = 0; i < navLink.length; i++) {
         navLink[i].classList.add("active-link")
     })
 }
-
