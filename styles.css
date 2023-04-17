@@ -22,16 +22,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     color: #E0C097;
+    text-align: center;
+    font-weight: 900;
 }
+
 nav {
     background-color: #121212;
     color: var(--brown-text-color);
     z-index: 1;
 }
-
-#checkout_container{
+#checkout_h1 {
     position: relative;
-    top: 150px;
+    top: 8rem;
+}
+
+.back_checkout_btn{
+    border: none;
+    background: none;
+    color: #F0F0F0;
+    margin-top: 5rem;
+}
+
+.back {
+    margin-left: .5rem;
+}
+.product_price {
+    font-size: 1rem;
+}
+.trash {
+    margin-left: 170px;
+}
+
+#checkout_container p {
+    font-size: 12px;
 }
 
 .navbar-brand img {
@@ -57,6 +80,11 @@ nav {
 main {
     margin-bottom: 100px;
 }
+
+.back_btn {
+    color: #F0F0F0;
+}
+
 .card {
     background-color: #F0F0F0;
 }
@@ -72,6 +100,22 @@ main {
     margin: 0;
     font-size: 1.5rem;
 }
+
+button {
+    border: none;
+}
+
+.btn_container {
+    margin-top: 2rem;
+}
+.plus, .minus {
+    font-size: 1.5rem;
+}
+.input_number {
+    width: 15%;
+    text-align: center;
+}
+
 .wrap_button{
     height: 80%;
 }
@@ -102,10 +146,7 @@ div .circle {
     font-size: 0.75rem;
     margin-right: 10px;
 }
-h1 {
-    text-align: center;
-    font-weight: 900;
-}
+
 footer {
     margin-top: auto;
     padding: 50px 0;
