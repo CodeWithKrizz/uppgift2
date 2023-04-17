@@ -31,9 +31,14 @@ nav {
     color: var(--brown-text-color);
     z-index: 1;
 }
+.main_nav {
+    margin: 0 1rem;
+}
+
 #checkout_h1 {
     position: relative;
     top: 8rem;
+
 }
 
 .back_checkout_btn{
