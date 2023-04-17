@@ -31,6 +31,10 @@ nav {
 .navbar-brand img {
     width: 3rem;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 .navbar-nav {
     margin: 0 40px;
 }
@@ -60,7 +64,11 @@ main {
 }
 /* KOLLA SEN */
 .card .btn:hover{
+<<<<<<< Updated upstream
     background-color:  #5b4747 ;
+=======
+    background-color: #5b4747 ;
+>>>>>>> Stashed changes
 } 
 .btn .bag {
     margin: 0;
@@ -96,6 +104,10 @@ div .circle {
     font-size: 0.75rem;
     margin-right: 10px;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 h1 {
     text-align: center;
     font-weight: 900;
@@ -151,4 +163,7 @@ footer .list-unstyled li a:hover {
         margin-bottom: 30px;
     }
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
