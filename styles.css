@@ -31,6 +31,10 @@ nav {
     color: var(--brown-text-color);
     z-index: 1;
 }
+
+article {
+    width: 40%;
+}
 .main_nav {
     margin: 0 1rem;
 }
