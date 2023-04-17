@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap CSS & JS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- Bootstrap CSS & JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
@@ -16,21 +17,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-     <!-- BS5 Icons -->
+    <!-- BS5 Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <title>Shopping bag</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg position-fixed container-fluid">
             <div class="container-fluid justify-content-between">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <a class="navbar-brand text-light ms-5" href="#"><img src="images/AA-logo2.png"></a>
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <a class="navbar-brand text-light ms-5" href="#"><img src="images/AA-logo2.png"></a>
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link main_nav" aria-current="page" href="index.html">Home</a>
@@ -51,7 +53,7 @@
                                         <p class="orderAmount">1</p>
                                     </div>
                                     <a class="nav-link" href="checkout.html">
-                                        <i class='bx bx-shopping-bag bag'></i>                                    
+                                        <i class='bx bx-shopping-bag bag'></i>
                                     </a>
                                 </button>
                             </div>
@@ -62,118 +64,173 @@
         </nav>
     </header>
 
-    <section id="checkout_container">
-        <h1 id="checkout_h1">Checkout</h1>
+    <section class="container mb-5">
+        
         <button class="back_checkout_btn ms-5 mb-5" type="button"><i class="bi bi-chevron-left"></i> <span class="back">Back</span></button>
-            <!-- Card 1  -->
-            <article>            
-            <div class="card ms-5 mb-4" style="max-width: 560px;" > <!-- Style attributet kommer från BS -->
-                <div class="row g-0">
-                  <div class="col-md-4 mt-2">
-                    <img src="images/kamera1.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body w-100 h-100">
-                      <h5 class="card-title">Leica II <span class="product_price">$27499</span></h5>
-                      <p class="card-text w-75">Amazing static camera,
-                        now with improved white balance and stability on video 4k mode.</p>
-                        <div class="btn_container">
-                            <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
-                            <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
-                            <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button> 
-                            <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Card 2 -->
-              <div class="card ms-5 mb-4 ms-5" style="max-width: 560px;">
-                <div class="row g-0">
-                  <div class="col-md-4 mt-2">
-                    <img src="images/kamera2.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body w-100 h-100">
-                      <h5 class="card-title">Pronto<span class="product_price">$99</span></h5>
-                      <p class="card-text w-75">Amazing static camera,
-                        now with improved white balance and stability on video 4k mode.</p>
-                      <div class="btn_container">
-                        <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
-                        <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
-                        <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button>
-                        <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-               
-              <!-- Card 3 -->
-              <div class="card ms-5 mb-4" style="max-width: 560px;">
-                <div class="row g-0">
-                  <div class="col-md-4 mt-2">
-                    <img src="images/kamera3.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body w-100 h-100">
-                      <h5 class="card-title">Reflekta II<span class="product_price">$2499</span></h5>
-                      <p class="card-text w-75">Amazing static camera,
-                        now with improved white balance and stability on video 4k mode.</p>
-                        <div class="btn_container">
-                            <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
-                            <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
-                            <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button> 
-                            <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+        <div class="row">
+            <div class="col">
+
+                <!-- Card 1 -->
+                <div class="card ms-5 mb-4 col-md-12" style="max-width: 560px;">
+                    <!-- Style attributet kommer från BS -->
+                    <div class="row g-0">
+                        <div class="col-md-4 mt-2">
+                            <img src="images/kamera1.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body w-100 h-100">
+                                <h5 class="card-title">Leica II <span class="product_price">$27499</span></h5>
+                                <p class="card-text w-75">Amazing static camera,
+                                    now with improved white balance and stability on video 4k mode.</p>
+                                <div class="btn_container">
+                                    <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
+                                    <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
+                                    <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button>
+                                    <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card ms-5 mb-4" style="max-width: 560px;">
-                <div class="row g-0">
-                  <div class="col-md-4 mt-2">
-                    <img src="images/kamera3.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body w-100 h-100">
-                      <h5 class="card-title">Reflekta II<span class="product_price">$2499</span></h5>
-                      <p class="card-text w-75">Amazing static camera,
-                        now with improved white balance and stability on video 4k mode.</p>
-                        <div class="btn_container">
-                            <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
-                            <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
-                            <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button> 
-                            <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+
+                <!-- Card 2 -->
+                <div class="card ms-5 mb-4 ms-5" style="max-width: 560px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 mt-2">
+                            <img src="images/kamera2.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body w-100 h-100">
+                                <h5 class="card-title">Pronto<span class="product_price">$99</span></h5>
+                                <p class="card-text w-75">Amazing static camera,
+                                    now with improved white balance and stability on video 4k mode.</p>
+                                <div class="btn_container">
+                                    <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
+                                    <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
+                                    <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button>
+                                    <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- Card 5 -->
-              <div class="card ms-5 mb-4" style="max-width: 560px;">
-                <div class="row g-0">
-                  <div class="col-md-4 mt-2">
-                    <img src="images/kamera3.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body w-100 h-100">
-                      <h5 class="card-title">Reflekta II<span class="product_price">$2499</span></h5>
-                      <p class="card-text w-75">Amazing static camera,
-                        now with improved white balance and stability on video 4k mode.</p>
-                        <div class="btn_container">
-                            <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
-                            <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
-                            <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button> 
-                            <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+
+                <!-- Card 3 -->
+                <div class="card ms-5 mb-4" style="max-width: 560px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 mt-2">
+                            <img src="images/kamera3.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body w-100 h-100">
+                                <h5 class="card-title">Reflekta II<span class="product_price">$2499</span></h5>
+                                <p class="card-text w-75">Amazing static camera,
+                                    now with improved white balance and stability on video 4k mode.</p>
+                                <div class="btn_container">
+                                    <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
+                                    <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
+                                    <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button>
+                                    <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </article>
+
+                <!-- Card 4 -->
+                <div class="card ms-5 mb-4" style="max-width: 560px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 mt-2">
+                            <img src="images/kamera4.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body w-100 h-100">
+                                <h5 class="card-title">Nikon D7500<span class="product_price">$1099</span></h5>
+                                <p class="card-text w-75">Amazing static camera,
+                                    now with improved white balance and stability on video 4k mode.</p>
+                                <div class="btn_container">
+                                    <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
+                                    <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
+                                    <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button>
+                                    <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card ms-5 mb-4" style="max-width: 560px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 mt-2">
+                            <img src="images/kamera5.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body w-100 h-100">
+                                <h5 class="card-title">Fujifilm X-10<span class="product_price">$449</span></h5>
+                                <p class="card-text w-75">Amazing static camera,
+                                    now with improved white balance and stability on video 4k mode.</p>
+                                <div class="btn_container">
+                                    <button type="button"><i class="bi bi-dash-circle-fill d-inline plus"></i></button>
+                                    <span class="m-2"><input class="input_number" type="text" name="" id=""></span>
+                                    <button type="button"><i class="bi bi-plus-circle-fill d-inline minus"></i></button>
+                                    <button class="trash" type="button"><i class="bi bi-trash3-fill"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table start -->
+            <div class="col">
+                <h1 id="checkout_h1">Checkout</h1>
+                <div class="table_container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                              
+                                <th scope="col">Product</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="js_products">Leica II</td>
+                                <td class="js_quantity">1</td>
+                                <td class="js_cost">$27499.00</td>
+                            </tr>
+                            <tr>
+                                <td class="js_products">Pronto</td>
+                                <td class="js_quantity">1</td>
+                                <td class="js_cost">$99.00</td>
+                            </tr>
+                            <tr>
+                                <td class="js_products">Reflekta II</td>
+                                <td class="js_quantity">1</td>
+                                <td class="js_cost">$2499.00</td>
+                            </tr>
+                            <tr>
+                                <td class="js_products">Nikon D7500</td>
+                                <td class="js_quantity">1</td>
+                                <td class="js_cost">$1099.00</td>
+                            </tr>
+                            <tr>
+                                <td class="js_products">Fujifilm X-10</td>
+                                <td class="js_quantity">1</td>
+                                <td class="js_cost">$449.00</td>
+                            </tr>
+                        </tbody>
+                        <div class="checkout_wrapper">
+                            <button type="button" class="checkout_btn btn-lg">Checkout <i class="bi bi-check2"></i></button>
+                            <p>Your total is: <span class="js_total">$1234</span></p>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -203,14 +260,14 @@
                     </ul>
                     <div class="follow-us">
                         <h3>Follow Us</h3>
-                <ul class="list-unstyled">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-                </ul>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
                     </div>
-                   
+
                 </div>
                 <div class="col-md-4">
                     <h3>Contact Us</h3>
@@ -238,4 +295,5 @@
 
 
 </body>
+
 </html>
