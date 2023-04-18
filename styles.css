@@ -163,7 +163,7 @@ div .circle {
     top: 15px;
     left: 25px;
 }
-.orderAmount{
+.order-amount{
     display: flex;
     text-align: center;
     align-items: center;
