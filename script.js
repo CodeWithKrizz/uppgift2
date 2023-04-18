@@ -133,5 +133,5 @@ document.querySelectorAll('.bag').forEach(link => {
     //     });
     });
   });
-  
 
+  
