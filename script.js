@@ -104,3 +104,19 @@ function updateCart() {
 }
 updateCart();
 
+
+document.querySelectorAll('.bag').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const url = e.target.parentElement.href;
+      fetch(url)
+        .then(response => response.text())
+        .then(html => {
+          document.querySelector('main').innerHTML = html;
+          // Call any necessary functions to update the new content
+          updateCart();
+        });
+    });
+  });
+  
+
