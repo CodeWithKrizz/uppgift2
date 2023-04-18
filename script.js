@@ -91,17 +91,21 @@ let minusButton = document.querySelectorAll(".minus-button");
 let trashButton = document.querySelectorAll(".trash");
 let checkoutButton = document.querySelector(".checkout_btn");
 let totalAmount = document.querySelector(".js_total");
-let inputNumber = document.querySelectorAll(".input_number");
+// let inputNumber = document.querySelectorAll(".input_number");
 let cardText = document.querySelectorAll(".card-text");
-let counter = 1;
+let counter = 0;
+let counters = Array(btnAddToCart.length).fill(0) //An array of counters, one counter for each button, all initialized to 0
 
 function updateCart() {
     for (let i = 0; i < btnAddToCart.length; i++){
         btnAddToCart[i].addEventListener("click", function(){
-            orderAmount.innerHTML = counter++;
+            orderAmount.innerHTML = ++counter;
+            counters[i]++;
          })
     }
 }
+
+
 updateCart();
 
 
@@ -109,13 +113,24 @@ document.querySelectorAll('.bag').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const url = e.target.parentElement.href;
-      fetch(url)
-        .then(response => response.text())
-        .then(html => {
-          document.querySelector('main').innerHTML = html;
-          // Call any necessary functions to update the new content
-          updateCart();
-        });
+
+      //Store counters in local storage
+      localStorage.setItem('counter', counter);
+      for (let i = 0; i < btnAddToCart.length; i++){
+        localStorage.setItem('counter' + i, counters[i]);
+        
+    }
+      window.location.href = url;
+
+    //   fetch(url)
+    //     .then(response => response.text())
+    //     .then(html => {
+            
+    //       document.querySelector('main').innerHTML = html;
+    //       // Call any necessary functions to update the new content
+    //       //updateCart();
+    //       populateCheckout();
+    //     });
     });
   });
   
