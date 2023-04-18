@@ -55,7 +55,7 @@ window.onload = function() {
     initShoppingList();
 }
 // Slut på JS-koden att utgå från.
-// FUCK sån där konstig loop som bara är förvirrande -_- <-----------------------!
+
 // Fråga till gruppen: Ska vi göra vår egen istället? Man måste väl inte ta deras kod eller?
 // Normal for-loop
 let shoppingList = {};
@@ -75,6 +75,8 @@ function initShoppingList() {
 // for (let i = 0; i < cardTitle.length; i++) {
 //     cardTitle[i].innerHTML = 
 // }
+
+
 // Detta skapar en variabel med alla navigations länkar och loopar igenom dem. För varje klick på en länk, så ska en funktion kallas på som utför koden: att loopa igenom alla element och ta bort klassnamnet .active-link för varje gång en navlänk klickas på och sen ska samma klass läggas till på just den länken som det klickades på. På så sätt ser vi till så att bara ett element kan ha klassen .active-link åt gången. // Jessica
 let navLink = document.querySelectorAll(".nav-link")
 for (let i = 0; i < navLink.length; i++) {

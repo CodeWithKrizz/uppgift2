@@ -124,6 +124,11 @@ main {
     border: none;
 }
 
+.card .btn:hover {
+    background-color: var(--brown-text-color);
+    color: #1c1c1c;
+}
+
 .btn .bag {
     margin: 0;
     font-size: 1.5rem;
