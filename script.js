@@ -88,3 +88,19 @@ let btnAddToCart = document.querySelectorAll(".btn-add-to-cart");
 let orderAmount = document.querySelector(".order-amount");
 let plusButton = document.querySelectorAll(".plus-button");
 let minusButton = document.querySelectorAll(".minus-button");
+let trashButton = doucument.querySelectorAll(".trash");
+let checkoutButton = document.querySelector(".checkout_btn");
+let totalAmount = document.querySelector(".js_total");
+let inputNumber = document.querySelectorAll(".input_number");
+let cardText = document.querySelectorAll(".card-text");
+let counter = 0;
+
+function updateCart() {
+    for (let i = 0; i < btnAddToCart.length; i++){
+        btnAddToCart[i].addEventListener("click", function(){
+            orderAmount.innerHTML = counter++;
+         })
+    }
+
+
+}
