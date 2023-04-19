@@ -119,15 +119,5 @@ document.querySelectorAll(".bag").forEach((link) => {
 			localStorage.setItem("counter" + i, counters[i]);
 		}
 		window.location.href = url;
-
-		//   fetch(url)
-		//     .then(response => response.text())
-		//     .then(html => {
-
-		//       document.querySelector('main').innerHTML = html;
-		//       // Call any necessary functions to update the new content
-		//       //updateCart();
-		//       populateCheckout();
-		//     });
 	});
 });
