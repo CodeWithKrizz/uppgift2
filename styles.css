@@ -3,23 +3,34 @@
     --brown-text-color: #E0C097;
     --background-color: #121212;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
+
 html {
     height: 100%;
 }
+
 body {
-    background-color: #1c1c1c; /* or #eee??? */
+    background-color: #1c1c1c;
+    /* or #eee??? */
     font-family: "Montserrat", sans-serif;
     min-height: 100%;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
 }
+
 h1 {
     color: #E0C097;
     text-align: center;
@@ -32,14 +43,19 @@ nav {
     z-index: 1;
 }
 
-thead{
+thead {
     font-weight: 900;
     background-color: #cfcfcf;
 }
 
+.checkout_btn {
+    transition: 0.5s ease-out;
+}
+
 .checkout_btn:hover {
     background-color: var(--brown-text-color);
-    transition: 0.3s ease-in;
+    transition: 0.5s ease-in;
+    color: #121212;
 }
 
 .table {
@@ -47,13 +63,15 @@ thead{
     margin: 2rem 1rem 0 5rem;
     width: 70%;
 }
-.checkout_wrapper{
+
+.checkout_wrapper {
     position: absolute;
     bottom: 2rem;
     right: 4rem;
 }
+
 .checkout_btn {
-    background-color: #1c1c1c ;
+    background-color: #1c1c1c;
     color: #F0F0F0;
     padding: 6px 30px;
     border-radius: 6px;
@@ -67,7 +85,7 @@ thead{
     margin: 4rem 0 2rem;
 }
 
-.back_checkout_btn{
+.back_checkout_btn {
     border: none;
     background: none;
     color: #F0F0F0;
@@ -77,11 +95,33 @@ thead{
 .back {
     margin-left: .5rem;
 }
+
 .product_price {
     font-size: 1rem;
 }
+
 .trash {
     margin-left: 170px;
+    font-size: 1.2rem;
+    transition: 0.5s ease-out;
+}
+
+.trash:hover {
+    color: #d9655a;
+    transition: 0.5s ease-in;
+    animation: shake 0.9s;
+}
+
+.plus,
+.minus {
+    font-size: 1.5rem;
+    transition: 0.5s ease-out;
+}
+
+.minus-btn:hover,
+.plus-btn:hover {
+    color: var(--brown-text-color);
+    transition: 0.5s ease-in;
 }
 
 .card-text {
@@ -91,23 +131,29 @@ thead{
 .navbar-brand img {
     width: 3rem;
 }
+
 .navbar-nav {
     margin: 0 40px;
 }
+
 .nav-link {
     color: var(--white-text-color);
 }
+
 .nav-link:hover {
     color: var(--brown-text-color);
     transition: color 0.3s ease-in;
 }
+
 .navbar-nav .active-link {
     color: var(--brown-text-color);
 }
+
 .nav-item i {
     font-size: 1.5rem;
     margin-right: 20px;
 }
+
 main {
     margin-bottom: 100px;
 }
@@ -119,6 +165,7 @@ main {
 .card {
     background-color: #F0F0F0;
 }
+
 .card .btn {
     background-color: #1c1c1c;
     border: none;
@@ -142,17 +189,16 @@ button {
 .btn_container {
     margin-top: 2rem;
 }
-.plus, .minus {
-    font-size: 1.5rem;
-}
+
 .input_number {
     width: 15%;
     text-align: center;
 }
 
-.wrap_button{
+.wrap_button {
     height: 80%;
 }
+
 div .circle {
     background-color: #F0F0F0;
     width: 1rem;
@@ -164,19 +210,23 @@ div .circle {
     left: 25px;
 }
 
-.order-amount{
+.order-amount {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
-.latest-post h3, .latest-post ul {
+
+.latest-post h3,
+.latest-post ul {
     margin-left: 50px;
 }
+
 .card-title {
     display: flex;
     justify-content: space-between;
 }
+
 .price-span {
     font-size: 0.75rem;
     margin-right: 10px;
@@ -186,10 +236,10 @@ div .circle {
     width: 100%;
     height: 50%;
     background-color: #D9D9D9;
-    border-radius: 12px ;
+    border-radius: 12px;
     padding-top: 2rem;
     position: relative;
-    
+
 }
 
 footer {
@@ -198,48 +248,79 @@ footer {
     background-color: var(--background-color);
     color: var(--brown-text-color);
 }
+
 footer h3 {
     color: var(--brown-text-color);
     font-size: 1.5rem;
 }
+
 footer p {
     color: var(--white-text-color);
     font-size: 1rem;
     line-height: 1.5;
     margin: 0 0 15px;
 }
+
 footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 footer ul li {
     color: var(--white-text-color);
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 10px;
 }
+
 footer ul li i {
     margin-right: 10px;
     color: var(--white-text-color);
 }
+
 footer a {
     color: var(--white-text-color);
     text-decoration: none;
     font-size: 16px;
 }
+
 footer hr {
     border-color: rgba(255, 255, 255, 0.3);
     margin: 40px 0;
 }
+
 footer p:last-of-type {
     margin-bottom: 0;
 }
+
 footer .list-unstyled li a:hover {
     text-decoration: underline;
 }
+
 @media (max-width: 767px) {
     footer .col-md-4 {
         margin-bottom: 30px;
+    }
+}
+
+
+@keyframes shake {
+
+
+    10% {
+        transform: rotate(-30deg);
+    }
+
+    40% {
+        transform: rotate(30deg);
+    }
+
+    70% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
