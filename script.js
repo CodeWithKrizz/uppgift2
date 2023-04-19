@@ -67,7 +67,6 @@ function initShoppingList() {
 	}
 }
 
-
 window.onload = function () {
 	// funktioner anropas här
 	initShoppingList();
@@ -90,8 +89,21 @@ let orderAmount = document.querySelector(".order-amount");
 let totalAmount = document.querySelector(".js_total");
 // let inputNumber = document.querySelectorAll(".input_number");
 let cardText = document.querySelectorAll(".card-text");
-let counter = 0;
-let counters = Array(btnAddToCart.length).fill(0); //An array of counters, one counter for each button, all initialized to 0
+// key -> value, "counter" -> 10 .setItem("key", 6), getItem("key")
+let counter = localStorage.getItem("counter");
+let counters = Array(btnAddToCart.length); //An array of counters, one counter for each button
+
+//Read from local storage, make sure that the counters are not null.
+for (let i = 0; i < counters.length; i++) {
+	let temp = localStorage.getItem("counter" + i);
+	if (temp != null) {
+		counters[i] = temp;
+	} else {
+		counters[i] = 0;
+	}
+}
+
+orderAmount.innerHTML = counter;
 
 function updateCart() {
 	for (let i = 0; i < btnAddToCart.length; i++) {
@@ -113,12 +125,7 @@ document.querySelectorAll(".bag").forEach((link) => {
 		localStorage.setItem("counter", counter);
 		for (let i = 0; i < btnAddToCart.length; i++) {
 			localStorage.setItem("counter" + i, counters[i]);
-		}
+		} // loop over the six counters and counteri -> counters[i]
 		window.location.href = url;
 	});
-<<<<<<< HEAD
 });
-
-=======
-});
->>>>>>> 3a65f181ee477aee4c43af31ee9eab02a86d2303

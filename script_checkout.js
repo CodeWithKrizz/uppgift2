@@ -1,44 +1,69 @@
 let orderAmount = document.querySelector(".order-amount");
 let inputNumber = document.querySelectorAll(".input_number");
-let plusButton = document.querySelectorAll(".plus-button");
-let minusButton = document.querySelectorAll(".minus-button");
+let plusButton = document.querySelectorAll(".plus-btn");
+let minusButton = document.querySelectorAll(".minus-btn");
 let trashButton = document.querySelectorAll(".trash");
 let checkoutButton = document.querySelector(".checkout_btn");
 let checkoutQuantity = document.querySelectorAll(".js_quantity");
-let counters = Array(inputNumber.length).fill(0) //An array of counters, one counter for each button, all initialized to 0
-let subAndAddCounter = 0;
+let counter = localStorage.getItem("counter");
+
+// localStorage.clear();
 
 // Get values from local storage
-let counter = localStorage.getItem('counter');
-for (let i = 0; i < inputNumber.length; i++){
-	counters[i] = localStorage.getItem('counter' + i);
+let counters = Array(inputNumber.length); //An array of counters, one counter for each button
+
+for (let i = 0; i < inputNumber.length; i++) {
+	let temp = localStorage.getItem("counter" + i);
+	if (temp != null) {
+		//If temp is not null, update the counter
+		counters[i] = temp;
+	} else {
+		counters[i] = 0;
+	}
 }
 
-orderAmount.innerHTML = counter
+function updateLocalStorage() {
+	localStorage.setItem("counter", counter);
+	for (let i = 0; i < counters.length; i++) {
+		localStorage.setItem("counter" + i, counters[i]); //"counteri" -> counters[i]
+	}
+}
 
-function populateCheckout(){
-    for (let i = 0; i < inputNumber.length; i++){
-        inputNumber[i].setAttribute('value', counters[i])
-		checkoutQuantity[i].innerHTML = counters[i]
-    }
+orderAmount.innerHTML = counter;
+
+function populateCheckout() {
+	for (let i = 0; i < inputNumber.length; i++) {
+		inputNumber[i].setAttribute("value", counters[i]);
+		checkoutQuantity[i].innerHTML = counters[i];
+	}
 }
 
 populateCheckout();
 
-function subtractAndAdd (){
-    for (let i = 0; i < minusButton.length; i++){
-        minusButton[i].addEventListener("click", function(){
-            inputNumber.value.innerHTML = subAndAddCounter--;
-        });
-    }
+function subtract() {
+	for (let i = 0; i < minusButton.length; i++) {
+		minusButton[i].addEventListener("click", function () {
+			if (counters[i] > 0) {
+				counters[i]--;
+				counter--;
+				populateCheckout();
+				orderAmount.innerHTML = counter;
+				updateLocalStorage();
+			}
+		});
+	}
 }
-subAndAddCounter();
 
-// function updateCart() {
-// 	for (let i = 0; i < btnAddToCart.length; i++) {
-// 		btnAddToCart[i].addEventListener("click", function () {
-// 			orderAmount.innerHTML = ++counter;
-// 			counters[i]++;
-// 		});
-// 	}
-// }
+function add() {
+	for (let i = 0; i < plusButton.length; i++) {
+		plusButton[i].addEventListener("click", function () {
+			counters[i]++;
+			counter++;
+			populateCheckout();
+			orderAmount.innerHTML = counter;
+			updateLocalStorage();
+		});
+	}
+}
+subtract();
+add();
