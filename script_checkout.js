@@ -1,3 +1,72 @@
+const listItems = [
+	{
+		name: "Leica II",
+		id: "leica",
+		description:
+			"Amazing static camera, now with improved white balance and stability on video 4k mode.",
+		price: 27499,
+		unit: "$",
+	},
+	{
+		name: "Pronto",
+		id: "pronto",
+		description: "The sleek design makes it easy to carry and handle.",
+		price: 99,
+		unit: "$",
+	},
+	{
+		name: "Reflekta II",
+		id: "reflekta",
+		description:
+			"Capturing stunning, high-quality photos has never been easier.",
+		price: 2499,
+		unit: "$",
+	},
+	{
+		name: "Nikon D7500",
+		id: "nikon",
+		description:
+			"With advanced autofocus technology, you'll never miss a shot.",
+		price: 1099,
+		unit: "$",
+	},
+	{
+		name: "Fujifilm X-10",
+		id: "fujifilm",
+		description:
+			"Shoot in any lighting condition with confidence and clarity.",
+		price: 449,
+		unit: "$",
+	},
+	{
+		name: "Canon",
+		id: "canon",
+		description:
+			"Share your favorite moments instantly with built-in WiFi connectivity.",
+		price: 249,
+		unit: "$",
+	},
+];
+
+let shoppingList = {};
+let cardTitle = document.querySelectorAll(".card-title");
+let cardText = document.querySelectorAll(".card-text");
+let checkoutProducts = document.querySelectorAll(".js_products");
+let checkoutCost = document.querySelectorAll(".js_cost");
+function initShoppingList() {
+	for (let i = 0; i < listItems.length; i++) {
+		shoppingList[shoppingList.name] = 0;
+		cardTitle[i].innerHTML =
+			listItems[i].name +
+			`<span class="product-price">${listItems[i].unit}${listItems[i].price}</span>`;
+		cardText[i].innerHTML = listItems[i].description;
+
+		checkoutProducts[i].innerHTML = listItems[i].name;
+		checkoutCost[i].innerHTML = listItems[i].unit + listItems[i].price;
+	}
+}
+initShoppingList();
+
 let orderAmount = document.querySelector(".order-amount");
 let inputNumber = document.querySelectorAll(".input_number");
 let plusButton = document.querySelectorAll(".plus-btn");
@@ -7,6 +76,8 @@ let checkoutButton = document.querySelector(".checkout_btn");
 let checkoutQuantity = document.querySelectorAll(".js_quantity");
 let counter = localStorage.getItem("counter");
 let tableRows = document.querySelectorAll(".table tbody tr");
+let totalAmount = document.querySelector(".js_total");
+let totalProductPrice = document.querySelector(".total-product-price");
 //localStorage.clear();
 // Get values from local storage
 let counters = Array(inputNumber.length); //An array of counters, one counter for each button
@@ -95,3 +166,21 @@ function trashDelete() {
 		});
 	}
 }
+
+let checkbox = document.querySelector("#vat-checkbox");
+function calculateTotal() {
+	let totalPrice = 0;
+	for (let i = 0; i < listItems.length; i++) {
+		if (checkbox.checked) {
+			let totalPriceWithVAT = counters[i] * (listItems[i].price * 1.25);
+			totalPrice += totalPriceWithVAT;
+		} else {
+			let productTotalPrice = counters[i] * listItems[i].price;
+			totalPrice += productTotalPrice;
+		}
+	}
+
+	totalProductPrice.innerHTML = `<span class="js_total">Your total is: $${totalPrice}</span>`;
+}
+checkoutButton.addEventListener("click", calculateTotal);
+

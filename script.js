@@ -85,7 +85,6 @@ for (let i = 0; i < navLink.length; i++) {
 
 let btnAddToCart = document.querySelectorAll(".btn-add-to-cart");
 let orderAmount = document.querySelector(".order-amount");
-let totalAmount = document.querySelector(".js_total");
 // let inputNumber = document.querySelectorAll(".input_number");
 let cardText = document.querySelectorAll(".card-text");
 // key -> value, "counter" -> 10 .setItem("key", 6), getItem("key")
