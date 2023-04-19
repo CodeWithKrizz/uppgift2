@@ -53,12 +53,12 @@ thead {
 }
 
 .checkout_btn {
-    transition: 0.5s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .checkout_btn:hover {
     background-color: var(--brown-text-color);
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
     color: #121212;
 }
 
@@ -107,25 +107,25 @@ thead {
 .trash {
     margin-left: 170px;
     font-size: 1.2rem;
-    transition: 0.5s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .trash:hover {
     color: #d9655a;
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
     animation: shake 0.9s;
 }
 
 .plus,
 .minus {
     font-size: 1.5rem;
-    transition: 0.5s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .minus-btn:hover,
 .plus-btn:hover {
     color: var(--brown-text-color);
-    transition: 0.5s ease-in;
+    transition: 0.3s ease-in;
 }
 
 .card-text {
@@ -244,7 +244,10 @@ div .circle {
     border-radius: 12px;
     padding-top: 2rem;
     position: relative;
+}
 
+.js_total {
+    font-weight: bold;
 }
 
 footer {

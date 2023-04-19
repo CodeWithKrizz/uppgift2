@@ -62,7 +62,7 @@ function initShoppingList() {
 		cardText[i].innerHTML = listItems[i].description;
 
 		checkoutProducts[i].innerHTML = listItems[i].name;
-		checkoutCost[i].innerHTML = listItems[i].unit + listItems[i].price;
+		checkoutCost[i].innerHTML = listItems[i].unit + listItems[i].price + " /per camera";
 	}
 }
 initShoppingList();
@@ -76,7 +76,7 @@ let checkoutButton = document.querySelector(".checkout_btn");
 let checkoutQuantity = document.querySelectorAll(".js_quantity");
 let counter = localStorage.getItem("counter");
 let tableRows = document.querySelectorAll(".table tbody tr");
-let totalAmount = document.querySelector(".js_total");
+// let totalAmount = document.querySelector(".js_total");
 let totalProductPrice = document.querySelector(".total-product-price");
 //localStorage.clear();
 // Get values from local storage
@@ -180,7 +180,7 @@ function calculateTotal() {
 		}
 	}
 
-	totalProductPrice.innerHTML = `<span class="js_total">Your total is: $${totalPrice}</span>`;
+	totalProductPrice.innerHTML = `Your total is: <span class="js_total">$${totalPrice}</span>`;
 }
 checkoutButton.addEventListener("click", calculateTotal);
 
