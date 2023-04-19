@@ -36,6 +36,9 @@ h1 {
     text-align: center;
     font-weight: 900;
 }
+a {
+    color: white;
+}
 
 nav {
     background-color: #121212;
@@ -215,6 +218,7 @@ div .circle {
     text-align: center;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
 .latest-post h3,
