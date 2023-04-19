@@ -16,7 +16,6 @@ for (let i = 0; i < inputNumber.length; i++){
 
 orderAmount.innerHTML = counter
 
-
 function populateCheckout(){
     for (let i = 0; i < inputNumber.length; i++){
         inputNumber[i].setAttribute('value', counters[i])
