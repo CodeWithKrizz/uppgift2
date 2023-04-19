@@ -6,9 +6,8 @@ let trashButton = document.querySelectorAll(".trash");
 let checkoutButton = document.querySelector(".checkout_btn");
 let checkoutQuantity = document.querySelectorAll(".js_quantity");
 let counter = localStorage.getItem("counter");
-
-// localStorage.clear();
-
+let tableRows = document.querySelectorAll(".table tbody tr");
+//localStorage.clear();
 // Get values from local storage
 let counters = Array(inputNumber.length); //An array of counters, one counter for each button
 
@@ -33,12 +32,14 @@ orderAmount.innerHTML = counter;
 
 function populateCheckout() {
 	for (let i = 0; i < inputNumber.length; i++) {
+		//console.log("here", counters[i]);
 		inputNumber[i].setAttribute("value", counters[i]);
 		checkoutQuantity[i].innerHTML = counters[i];
 	}
 }
 
 populateCheckout();
+deleteEmptyRows();
 
 function subtract() {
 	for (let i = 0; i < minusButton.length; i++) {
@@ -46,9 +47,10 @@ function subtract() {
 			if (counters[i] > 0) {
 				counters[i]--;
 				counter--;
-				populateCheckout();
 				orderAmount.innerHTML = counter;
+				populateCheckout();
 				updateLocalStorage();
+				deleteEmptyRows();
 			}
 		});
 	}
@@ -57,6 +59,9 @@ function subtract() {
 function add() {
 	for (let i = 0; i < plusButton.length; i++) {
 		plusButton[i].addEventListener("click", function () {
+			if (counters[i] == 0) {
+				tableRows[i].style.display = "";
+			}
 			counters[i]++;
 			counter++;
 			populateCheckout();
@@ -65,5 +70,28 @@ function add() {
 		});
 	}
 }
+
 subtract();
 add();
+trashDelete();
+
+function deleteEmptyRows() {
+	for (let i = 0; i < counters.length; i++) {
+		if (counters[i] == 0) {
+			tableRows[i].style.display = "none";
+		}
+	}
+}
+
+function trashDelete() {
+	for (let i = 0; i < trashButton.length; i++) {
+		trashButton[i].addEventListener("click", function () {
+			counter -= counters[i];
+			counters[i] = 0;
+			populateCheckout();
+			orderAmount.innerHTML = counter;
+			updateLocalStorage();
+			deleteEmptyRows();
+		});
+	}
+}

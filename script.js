@@ -55,7 +55,6 @@ let cardTitle = document.querySelectorAll(".card-title");
 let cardDescription = document.querySelectorAll(".card-description");
 function initShoppingList() {
 	for (let i = 0; i < listItems.length; i++) {
-		console.log(listItems[i]);
 		shoppingList[shoppingList.name] = 0;
 
 		cardTitle[i].innerHTML =
