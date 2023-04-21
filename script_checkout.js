@@ -1,3 +1,8 @@
+/* Den här koden deklarerar en array som kallas listItems som innehåller flera objekt som representerar olika kameramodeller. Varje objekt har fyra nyckel-värde-par: name, id, description, price och unit.
+
+Nyckeln name innehåller namnet på kameramodellen som en sträng. Nyckeln id innehåller en unik identifierare för kameramodellen. Nyckeln description innehåller en kort beskrivning av kameramodellen som en sträng. Nyckeln price innehåller priset på kameramodellen som en siffra. Slutligen innehåller nyckeln unit valutasymbolen för priset som en sträng.
+
+Övergripande sett är den här koden ett enkelt exempel på hur man lagrar och organiserar data med hjälp av JavaScript-arrayer och objekt. */
 const listItems = [
 	{
 		name: "Leica II",
