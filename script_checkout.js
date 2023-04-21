@@ -51,11 +51,34 @@ const listItems = [
 	},
 ];
 
+//Hämtar alla element från HTML sidan
 let shoppingList = {};
 let cardTitle = document.querySelectorAll(".card-title");
 let cardText = document.querySelectorAll(".card-text");
 let checkoutProducts = document.querySelectorAll(".js_products");
 let checkoutCost = document.querySelectorAll(".js_cost");
+let orderAmount = document.querySelector(".order-amount");
+let inputNumber = document.querySelectorAll(".input_number");
+let plusButton = document.querySelectorAll(".plus-btn");
+let minusButton = document.querySelectorAll(".minus-btn");
+let trashButton = document.querySelectorAll(".trash");
+let checkoutButton = document.querySelector(".checkout_btn");
+let checkoutQuantity = document.querySelectorAll(".js_quantity");
+let counter = localStorage.getItem("counter");
+let tableRows = document.querySelectorAll(".table tbody tr");
+let totalProductPrice = document.querySelector(".total-product-price");
+let counters = Array(inputNumber.length); //An array of counters, one counter for each button
+//localStorage.clear(); // Get values from local storage
+
+for (let i = 0; i < inputNumber.length; i++) {
+	let temp = localStorage.getItem("counter" + i);
+	if (temp != null) {
+		//If temp is not null, update the counter
+		counters[i] = temp;
+	} else {
+		counters[i] = 0;
+	}
+}
 
 function initShoppingList() {
 	for (let i = 0; i < listItems.length; i++) {
@@ -70,32 +93,6 @@ function initShoppingList() {
 	}
 }
 initShoppingList();
-
-//Hämtar alla element från HTML sidan
-let orderAmount = document.querySelector(".order-amount");
-let inputNumber = document.querySelectorAll(".input_number");
-let plusButton = document.querySelectorAll(".plus-btn");
-let minusButton = document.querySelectorAll(".minus-btn");
-let trashButton = document.querySelectorAll(".trash");
-let checkoutButton = document.querySelector(".checkout_btn");
-let checkoutQuantity = document.querySelectorAll(".js_quantity");
-let counter = localStorage.getItem("counter");
-let tableRows = document.querySelectorAll(".table tbody tr");
-// let totalAmount = document.querySelector(".js_total");
-let totalProductPrice = document.querySelector(".total-product-price");
-//localStorage.clear();
-// Get values from local storage
-let counters = Array(inputNumber.length); //An array of counters, one counter for each button
-
-for (let i = 0; i < inputNumber.length; i++) {
-	let temp = localStorage.getItem("counter" + i);
-	if (temp != null) {
-		//If temp is not null, update the counter
-		counters[i] = temp;
-	} else {
-		counters[i] = 0;
-	}
-}
 
 function updateLocalStorage() {
 	localStorage.setItem("counter", counter);
