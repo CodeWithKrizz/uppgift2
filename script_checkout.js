@@ -62,7 +62,7 @@ function initShoppingList() {
 		cardText[i].innerHTML = listItems[i].description;
 
 		checkoutProducts[i].innerHTML = listItems[i].name;
-		checkoutCost[i].innerHTML = listItems[i].unit + listItems[i].price + " /per camera";
+		checkoutCost[i].innerHTML = listItems[i].unit + listItems[i].price;
 	}
 }
 initShoppingList();
