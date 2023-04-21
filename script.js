@@ -112,7 +112,7 @@ for (let i = 0; i < counters.length; i++) {
 
 orderAmount.innerHTML = counter;
 
-// Funktion som lägger till EventListener för alla knappar med klassen "btnAddToCart" och uppdaterar varukorgen när en produkt läggs till.
+/* Funktion som lägger till EventListener för alla knappar med klassen "btnAddToCart" och uppdaterar varukorgen när en produkt läggs till */
 function updateCart() {
     // Loopar igenom alla knappar i btnAddToCart arrayen.
     for (let i = 0; i < btnAddToCart.length; i++) {
@@ -125,8 +125,7 @@ function updateCart() {
         });
     }
 }
-// Kallar på updateCart-funktionen för att lägga till EventListener för alla "Add to cart"-knappar.
-updateCart();
+updateCart(); // Kallar på updateCart-funktionen för att lägga till EventListener för alla "Add to cart"-knappar.
 
 // För varje element med klassen "bag", lägg till en EventListener för "click".
 document.querySelectorAll(".bag").forEach((link) => {
