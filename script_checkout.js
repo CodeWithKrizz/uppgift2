@@ -135,6 +135,9 @@ function populateCheckout() {
 populateCheckout();
 deleteEmptyRows();
 
+/* Den här koden definierar en funktion som heter subtract(). Funktionen används för att subtrahera 1 från räknaren och uppdatera antalet varor i inköpslistan och i kassan när en användare klickar på minusknappen.
+
+Koden börjar med en for-loop som itererar över varje minusknapp som finns på sidan, genom att använda längden av minusButton. Inuti loopen finns en EventListener som lyssnar efter ett klick på varje minusknapp. När användaren klickar på knappen, kontrollerar en if-sats om räknaren är större än 0. Om den är det, minskas räknaren och antalet varor i kundvagnen uppdateras. Sedan uppdateras även kassan med hjälp av funktionen populateCheckout(). Slutligen uppdateras localStorage och eventuella tomma rader i kassan tas bort genom att anropa funktionen deleteEmptyRows(). */
 function subtract() {
 	for (let i = 0; i < minusButton.length; i++) {
 		minusButton[i].addEventListener("click", function () {
@@ -150,6 +153,7 @@ function subtract() {
 	}
 }
 
+/* Denna kod definierar en funktion add() som lägger till en produkt i kundvagnen när användaren klickar på plusknappen. Funktionen loopar igenom alla knappar med klassen plusButton och lägger till en EventListener på varje knapp som lyssnar efter ett klick. När användaren klickar på en plusknapp ökar antalet produkter av motsvarande produkt i kundvagnen med ett, och om antalet produkter tidigare var 0 visar funktionen också den dolda raden i kundvagnstabellen för produkten. Funktionen anropar också populateCheckout() för att uppdatera kundvagnens utseende, samt orderAmount och updateLocalStorage() för att uppdatera den totala antalet produkter och lagra den nya produktkvantiteten i localStorage. */
 function add() {
 	for (let i = 0; i < plusButton.length; i++) {
 		plusButton[i].addEventListener("click", function () {
