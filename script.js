@@ -59,7 +59,7 @@ function initShoppingList() {
 
 		cardTitle[i].innerHTML =
 			listItems[i].name +
-			`<span class="price-span">${listItems[i].unit}${listItems[i].price}</span>`; // Remember to remove the span elements from the html because I added them here instead.
+			`<span class="price-span">${listItems[i].unit}${listItems[i].price}</span>`;
 		cardDescription[i].innerHTML = listItems[i].description;
 
 		console.log(cardTitle[i]);
@@ -67,7 +67,7 @@ function initShoppingList() {
 }
 
 window.onload = function () {
-	// funktioner anropas här
+	// funktioner anropas här (kommentar samt kod från lärare)
 	initShoppingList();
 };
 // Slut på JS-koden att utgå från.
