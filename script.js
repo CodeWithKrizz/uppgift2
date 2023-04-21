@@ -98,7 +98,7 @@ let cardText = document.querySelectorAll(".card-text");
 
 // Hämtar från local storage
 let counter = localStorage.getItem("counter");
-let counters = Array(btnAddToCart.length); //en array av counters, en counter för varje button
+let counters = Array(btnAddToCart.length); //en array av counters, en counter för varje add to cart knapp.
 
 // Läs från localStorage, se till att counters inte är null
 for (let i = 0; i < counters.length; i++) {
