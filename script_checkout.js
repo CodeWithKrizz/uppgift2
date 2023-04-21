@@ -204,8 +204,7 @@ function trashDelete() {
 /* Variabeln checkbox är en referens till HTML-elementet med id #vat-checkbox. Funktionen calculateTotal beräknar den 
 totala kostnaden för alla produkter i kundvagnen genom att loopa igenom arrayen listItems och multiplicera antalet produkter 
 i varje rad med priset per produkt. Om kryssrutan för moms är markerad, multipliceras priset med 1,25 för att lägga till moms. 
-Totalpriset sparas i variabeln totalPrice. Sedan uppdateras HTML-elementet totalProductPrice för att visa det beräknade totalpriset 
-i en sträng med rätt formatering. */
+Totalpriset sparas i variabeln totalPrice. Sedan uppdateras HTML-elementet totalProductPrice för att visa det beräknade totalpriset i en sträng med rätt formatering. */
 let checkbox = document.querySelector("#vat-checkbox");
 function calculateTotal() {
 	let totalPrice = 0;
