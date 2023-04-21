@@ -24,31 +24,38 @@
 </head>
 
 <body>
+    <!-- Sidhuvud -->
     <header>
+        <!-- Navigationsfält -->
         <nav class="navbar navbar-expand-lg position-fixed container-fluid">
             <div class="container-fluid justify-content-between">
+                <!-- Navigationsfältets knapp för mobilvy -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Växla navigering">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Navigationsfältets meny -->
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigationsfältets varumärkeslogo -->
                     <a class="navbar-brand text-light ms-5" href="#"><img src="images/AA-logo2.png"></a>
+                    <!-- Huvudnavigationslänkar -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link main_nav" aria-current="page" href="index.html">Home</a>
-                            <!-- ADD Active via JS -->
+                            <a class="nav-link main_nav" aria-current="page" href="index.html">Hem</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link main_nav" href="#">Features</a>
+                            <a class="nav-link main_nav" href="#">Funktioner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link main_nav" href="#">Pricing</a>
+                            <a class="nav-link main_nav" href="#">Priser</a>
                         </li>
                     </ul>
-                    <ul class=" navbar-nav nav_bag">
+                    <!-- Ikon för shoppingväska -->
+                    <ul class="navbar-nav nav_bag">
                         <li class="nav-item">
                             <div class="wrap_button">
                                 <button class="btn">
+                                    <!-- Cirkel för att visa artikelantal -->
                                     <div class="circle">
                                         <p class="order-amount"></p>
                                     </div>
@@ -64,25 +71,30 @@
         </nav>
     </header>
 
+    <!-- Huvudinnehåll -->
     <section class="container mb-5">
+        <!-- Tillbaka-knapp -->
         <a href="index.html">
-        <button class="back_checkout_btn ms-5 mb-5" type="button"><i class="bi bi-chevron-left"></i> <span
-                class="back">Back</span></button>
-</a>
+            <button class="back_checkout_btn ms-5 mb-5" type="button"><i class="bi bi-chevron-left"></i> <span
+                    class="back">Tillbaka</span></button>
+        </a>
         <div class="row">
             <div class="col checkout-cards-container">
+                <!-- Följande struktur upprepas för varje produktkort -->
 
-                <!-- Card 1 -->
+                <!-- Kort 1 -->
                 <div class="card ms-5 mb-4 col-md-12 product-card" style="max-width: 560px;">
-                    <!-- Style attributet kommer från BS -->
                     <div class="row g-0">
+                        <!-- Produktbild -->
                         <div class="col-md-4 mt-2">
                             <img src="images/kamera1.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
+                        <!-- Produktinformation och knappar -->
                         <div class="col-md-8">
                             <div class="card-body w-100 h-100">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text w-75"></p>
+                                <!-- Knappar för att ändra mängd och ta bort artikel -->
                                 <div class="btn_container">
                                     <button type="button" class="minus-btn"><i
                                             class="bi bi-dash-circle-fill d-inline minus"></i></button>
@@ -96,16 +108,19 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Kort 2 -->
                 <div class="card ms-5 mb-4 ms-5 product-card" style="max-width: 560px;">
                     <div class="row g-0">
+                        <!-- Produktbild -->
                         <div class="col-md-4 mt-2">
                             <img src="images/kamera2.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
+                        <!-- Produktinformation och knappar -->
                         <div class="col-md-8">
                             <div class="card-body w-100 h-100">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text w-75"></p>
+                                <!-- Knappar för att ändra mängd och ta bort artikel -->
                                 <div class="btn_container">
                                     <button type="button" class="minus-btn"><i
                                             class="bi bi-dash-circle-fill d-inline minus"></i></button>
@@ -119,16 +134,19 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Kort 3 -->
                 <div class="card ms-5 mb-4 product-card" style="max-width: 560px;">
                     <div class="row g-0">
+                        <!-- Produktbild -->
                         <div class="col-md-4 mt-2">
                             <img src="images/kamera3.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
+                        <!-- Produktinformation och knappar -->
                         <div class="col-md-8">
                             <div class="card-body w-100 h-100">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text w-75"></p>
+                                <!-- Knappar för att ändra mängd och ta bort artikel -->
                                 <div class="btn_container">
                                     <button type="button" class="minus-btn"><i
                                             class="bi bi-dash-circle-fill d-inline minus"></i></button>
@@ -142,16 +160,19 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- Kort 4 -->
                 <div class="card ms-5 mb-4 product-card" style="max-width: 560px;">
                     <div class="row g-0">
+                        <!-- Produktbild -->
                         <div class="col-md-4 mt-2">
                             <img src="images/kamera4.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
+                        <!-- Produktinformation och knappar -->
                         <div class="col-md-8">
                             <div class="card-body w-100 h-100">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text w-75"></p>
+                                <!-- Knappar för att ändra mängd och ta bort artikel -->
                                 <div class="btn_container">
                                     <button type="button" class="minus-btn"><i
                                             class="bi bi-dash-circle-fill d-inline minus"></i></button>
@@ -164,17 +185,19 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 5 -->
+                <!-- Kort 5 -->
                 <div class="card ms-5 mb-4 product-card" style="max-width: 560px;">
                     <div class="row g-0">
+                        <!-- Produktbild -->
                         <div class="col-md-4 mt-2">
                             <img src="images/kamera5.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
+                        <!-- Produktinformation och knappar -->
                         <div class="col-md-8">
                             <div class="card-body w-100 h-100">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text w-75"></p>
+                                <!-- Knappar för att ändra mängd och ta bort artikel -->
                                 <div class="btn_container">
                                     <button type="button" class="minus-btn"><i
                                             class="bi bi-dash-circle-fill d-inline minus"></i></button>
@@ -188,17 +211,19 @@
                     </div>
                 </div>
 
-
-                <!-- Card 6 -->
+                <!-- Kort 6 -->
                 <div class="card ms-5 mb-4 product-card" style="max-width: 560px;">
                     <div class="row g-0">
+                        <!-- Produktbild -->
                         <div class="col-md-4 mt-2">
                             <img src="images/kamera6.jpg" class="img-fluid rounded-start" alt="...">
                         </div>
+                        <!-- Produktinformation och knappar -->
                         <div class="col-md-8">
                             <div class="card-body w-100 h-100">
                                 <h5 class="card-title"></h5>
                                 <p class="card-text w-75"></p>
+                                <!-- Knappar för att ändra mängd och ta bort artikel -->
                                 <div class="btn_container">
                                     <button type="button" class="minus-btn"><i
                                             class="bi bi-dash-circle-fill d-inline minus"></i></button>
@@ -213,21 +238,23 @@
                 </div>
             </div>
 
-
-
-            <!-- Table start -->
+            <!-- Tabell start -->
             <div class="col">
                 <h1 id="checkout_h1">Checkout</h1>
+                <!-- Tabell-kontainer börjar här -->
                 <div class="table_container">
+                    <!-- Tabell med produktinformation -->
                     <table class="table">
                         <thead>
+                            <!-- Rubriker för tabellen -->
                             <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Cost</th>
+                                <th scope="col">Produkt</th>
+                                <th scope="col">Antal</th>
+                                <th scope="col">Kostnad</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Tabellrader för produkterna, kommer fyllas med data från JavaScript -->
                             <tr>
                                 <td class="js_products"></td>
                                 <td class="js_quantity"></td>
@@ -259,14 +286,17 @@
                                 <td class="js_cost"></td>
                             </tr>
                         </tbody>
+                        <!-- Kassavdelning börjar här -->
                         <div class="checkout_wrapper">
+                            <!-- Kryssruta för att inkludera moms (25%) -->
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="vat-checkbox">
-                                <label class="form-check-label" for="vat-checkbox">Including VAT (25%)</label>
+                                <label class="form-check-label" for="vat-checkbox">Inklusive moms (25%)</label>
                             </div>
-
+                            <!-- Kassaknapp -->
                             <button type="button" class="checkout_btn btn-lg">Checkout <i
                                     class="bi bi-check2"></i></button>
+                            <!-- Totalt pris för produkterna -->
                             <p class="total-product-price"></p>
                         </div>
                     </table>
@@ -277,7 +307,8 @@
 
 
 
-    <footer class="">
+    <!-- footer-sektion: Innehållande tre kolumner med information om webbplatsen. -->
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
