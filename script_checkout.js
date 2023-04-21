@@ -53,6 +53,7 @@ let cardTitle = document.querySelectorAll(".card-title");
 let cardText = document.querySelectorAll(".card-text");
 let checkoutProducts = document.querySelectorAll(".js_products");
 let checkoutCost = document.querySelectorAll(".js_cost");
+
 function initShoppingList() {
 	for (let i = 0; i < listItems.length; i++) {
 		shoppingList[shoppingList.name] = 0;
