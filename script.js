@@ -79,7 +79,6 @@ function initShoppingList() {
 }
 
 window.onload = function () {
-	// funktioner anropas här (kommentar samt kod från lärare)
 	initShoppingList();
 };
 // Slut på JS-koden från lärarna att utgå från.
