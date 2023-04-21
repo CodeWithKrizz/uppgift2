@@ -71,6 +71,7 @@ function initShoppingList() {
 }
 initShoppingList();
 
+//Hämtar alla element från HTML sidan
 let orderAmount = document.querySelector(".order-amount");
 let inputNumber = document.querySelectorAll(".input_number");
 let plusButton = document.querySelectorAll(".plus-btn");
