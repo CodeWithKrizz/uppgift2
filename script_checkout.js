@@ -169,6 +169,8 @@ subtract();
 add();
 trashDelete();
 
+/* Funktionen deleteEmptyRows tar bort tomma rader från en tabell genom att loopa igenom arrayen counters och 
+gömma raden för varje element i arrayen som är lika med 0. */
 function deleteEmptyRows() {
 	for (let i = 0; i < counters.length; i++) {
 		if (counters[i] == 0) {
@@ -177,6 +179,11 @@ function deleteEmptyRows() {
 	}
 }
 
+/* Funktionen trashDelete lägger till en "click"-händelse på varje trash-knapp på sidan. När användaren klickar 
+på knappen så minskas counter-variabeln med antalet produkter som representeras av counters[i] och counters[i] 
+sätts till 0. Sedan kallar funktionen populateCheckout för att uppdatera kundvagnen, orderAmount-elementet uppdateras 
+för att visa den nya antalet produkter och updateLocalStorage funktionen kallas för att uppdatera lokal lagring. 
+Slutligen kallas deleteEmptyRows-funktionen för att ta bort eventuellt tomma rader från tabellen. */
 function trashDelete() {
 	for (let i = 0; i < trashButton.length; i++) {
 		trashButton[i].addEventListener("click", function () {
@@ -190,6 +197,11 @@ function trashDelete() {
 	}
 }
 
+/* Variabeln checkbox är en referens till HTML-elementet med id #vat-checkbox. Funktionen calculateTotal beräknar den 
+totala kostnaden för alla produkter i kundvagnen genom att loopa igenom arrayen listItems och multiplicera antalet produkter 
+i varje rad med priset per produkt. Om kryssrutan för moms är markerad, multipliceras priset med 1,25 för att lägga till moms. 
+Totalpriset sparas i variabeln totalPrice. Sedan uppdateras HTML-elementet totalProductPrice för att visa det beräknade totalpriset 
+i en sträng med rätt formatering. */
 let checkbox = document.querySelector("#vat-checkbox");
 function calculateTotal() {
 	let totalPrice = 0;
@@ -205,4 +217,7 @@ function calculateTotal() {
 
 	totalProductPrice.innerHTML = `Your total is: <span class="js_total">$${totalPrice}</span>`;
 }
+
+/* Lägger till en händelselyssnare på knappen med id #checkoutButton. När knappen klickas på, kommer funktionen calculateTotal 
+att köras för att beräkna den totala kostnaden för produkterna i kundvagnen och uppdatera visningen på sidan. */
 checkoutButton.addEventListener("click", calculateTotal);

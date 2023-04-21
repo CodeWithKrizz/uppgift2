@@ -59,7 +59,7 @@ function initShoppingList() {
 
 		cardTitle[i].innerHTML =
 			listItems[i].name +
-			`<span class="price-span">${listItems[i].unit}${listItems[i].price}</span>`; // Remember to remove the span elements from the html because I added them here instead.
+			`<span class="price-span">${listItems[i].unit}${listItems[i].price}</span>`;
 		cardDescription[i].innerHTML = listItems[i].description;
 
 		console.log(cardTitle[i]);
@@ -67,10 +67,10 @@ function initShoppingList() {
 }
 
 window.onload = function () {
-	// funktioner anropas här
+	// funktioner anropas här (kommentar samt kod från lärare)
 	initShoppingList();
 };
-// Slut på JS-koden att utgå från.
+// Slut på JS-koden från lärarna att utgå från.
 
 // Detta skapar en variabel med alla navigations länkar och loopar igenom dem. För varje klick på en länk, så ska en funktion kallas på som utför koden: att loopa igenom alla element och ta bort klassnamnet .active-link för varje gång en navlänk klickas på och sen ska samma klass läggas till på just den länken som det klickades på. På så sätt ser vi till så att bara ett element kan ha klassen .active-link åt gången. // Jessica
 let navLink = document.querySelectorAll(".nav-link");
@@ -83,15 +83,16 @@ for (let i = 0; i < navLink.length; i++) {
 	});
 }
 
+// Hämtar HTML element och lagrar i variablar
 let btnAddToCart = document.querySelectorAll(".btn-add-to-cart");
 let orderAmount = document.querySelector(".order-amount");
-// let inputNumber = document.querySelectorAll(".input_number");
 let cardText = document.querySelectorAll(".card-text");
-// key -> value, "counter" -> 10 .setItem("key", 6), getItem("key")
-let counter = localStorage.getItem("counter");
-let counters = Array(btnAddToCart.length); //An array of counters, one counter for each button
 
-//Read from local storage, make sure that the counters are not null.
+// Hämtar från local storage
+let counter = localStorage.getItem("counter");
+let counters = Array(btnAddToCart.length); //en array av counters, en counter för varje button
+
+// Läs från localStorage, se till att counters inte är null
 for (let i = 0; i < counters.length; i++) {
 	let temp = localStorage.getItem("counter" + i);
 	if (temp != null) {
@@ -103,27 +104,41 @@ for (let i = 0; i < counters.length; i++) {
 
 orderAmount.innerHTML = counter;
 
+// Funktion som lägger till EventListener för alla knappar med klassen "btnAddToCart" och uppdaterar varukorgen när en produkt läggs till.
 function updateCart() {
-	for (let i = 0; i < btnAddToCart.length; i++) {
-		btnAddToCart[i].addEventListener("click", function () {
-			orderAmount.innerHTML = ++counter;
-			counters[i]++;
-		});
-	}
+    // Loopar igenom alla knappar i btnAddToCart arrayen.
+    for (let i = 0; i < btnAddToCart.length; i++) {
+        // Lägger till en EventListener för "click" för varje knapp i btnAddToCart-arrayen.
+        btnAddToCart[i].addEventListener("click", function () {
+            // Ökar counter (antal produkter i varukorgen) med 1 och uppdaterar orderAmount-elementet med det nya värdet.
+            orderAmount.innerHTML = ++counter;
+            // Ökar räknaren för den aktuella produkten (i) med 1.
+            counters[i]++;
+        });
+    }
 }
-
+// Kallar på updateCart-funktionen för att lägga till EventListener för alla "Add to cart"-knappar.
 updateCart();
 
+// För varje element med klassen "bag", lägg till en EventListener för "click".
 document.querySelectorAll(".bag").forEach((link) => {
-	link.addEventListener("click", (e) => {
-		e.preventDefault();
-		const url = e.target.parentElement.href;
+    // När användaren klickar på länken, körs denna funktion.
+    link.addEventListener("click", (e) => {
+        // Förhindrar att länken agerar som en vanlig länk och navigerar till en annan sida.
+        e.preventDefault();
+        // Sparar href-attributet från länkens parent-element i en variabel.
+        const url = e.target.parentElement.href;
 
-		//Store counters in local storage
-		localStorage.setItem("counter", counter);
-		for (let i = 0; i < btnAddToCart.length; i++) {
-			localStorage.setItem("counter" + i, counters[i]);
-		} // loop over the six counters and counteri -> counters[i]
-		window.location.href = url;
-	});
+        // Lagrar counter (totalt antal produkter i varukorgen) i localStorage.
+        localStorage.setItem("counter", counter);
+        // Loopar igenom alla knappar i btnAddToCart-arrayen.
+        for (let i = 0; i < btnAddToCart.length; i++) {
+            // Lagrar varje produkts individuella räknare i localStorage med nyckeln "counter" + index.
+            localStorage.setItem("counter" + i, counters[i]);
+        } 
+        
+        // Navigerar till den ursprungliga länkadressen.
+        window.location.href = url;
+    });
 });
+
