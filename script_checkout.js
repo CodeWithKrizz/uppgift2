@@ -2,7 +2,7 @@
 
 Nyckeln name innehåller namnet på kameramodellen som en sträng. Nyckeln id innehåller en unik identifierare för kameramodellen. Nyckeln description innehåller en kort beskrivning av kameramodellen som en sträng. Nyckeln price innehåller priset på kameramodellen som en siffra. Slutligen innehåller nyckeln unit valutasymbolen för priset som en sträng. */
 const listItems = [
-	{
+	{ // Kamera 1
 		name: "Leica II",
 		id: "leica",
 		description:
@@ -10,14 +10,14 @@ const listItems = [
 		price: 27499,
 		unit: "$",
 	},
-	{
+	{ // Kamera 2
 		name: "Pronto",
 		id: "pronto",
 		description: "The sleek design makes it easy to carry and handle.",
 		price: 99,
 		unit: "$",
 	},
-	{
+	{ // Kamera 3
 		name: "Reflekta II",
 		id: "reflekta",
 		description:
@@ -25,7 +25,7 @@ const listItems = [
 		price: 2499,
 		unit: "$",
 	},
-	{
+	{ // Kamera 4
 		name: "Nikon D7500",
 		id: "nikon",
 		description:
@@ -33,7 +33,7 @@ const listItems = [
 		price: 1099,
 		unit: "$",
 	},
-	{
+	{ // Kamera 5
 		name: "Fujifilm X-10",
 		id: "fujifilm",
 		description:
@@ -41,7 +41,7 @@ const listItems = [
 		price: 449,
 		unit: "$",
 	},
-	{
+	{ // Kamera 6
 		name: "Canon",
 		id: "canon",
 		description:
