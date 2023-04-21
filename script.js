@@ -59,6 +59,11 @@ const listItems = [
 	},
 ];
 
+/* Den här koden definierar en tom JavaScript-objektet "shoppingList" och två variabler som innehåller en nodelist för alla element med klassnamnet "card-title" och "card-description" i HTML-dokumentet.
+
+Funktionen "initShoppingList()" innehåller en for-loop som loopar igenom alla objekt i arrayen "listItems". För varje objekt sätter den värdet för nyckeln "name" i "shoppingList" till 0.
+
+Därefter uppdateras textinnehållet i elementet "cardTitle[i]" med namnet på produkten och dess pris i en span-tag med klassen "price-span". Textinnehållet i elementet "cardDescription[i]" uppdateras också med produkten beskrivning. */
 let shoppingList = {};
 let cardTitle = document.querySelectorAll(".card-title");
 let cardDescription = document.querySelectorAll(".card-description");
@@ -70,8 +75,6 @@ function initShoppingList() {
 			listItems[i].name +
 			`<span class="price-span">${listItems[i].unit}${listItems[i].price}</span>`;
 		cardDescription[i].innerHTML = listItems[i].description;
-
-		console.log(cardTitle[i]);
 	}
 }
 
