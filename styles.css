@@ -52,9 +52,32 @@ thead {
     background-color: #cfcfcf;
 }
 
-.checkout_btn {
-    transition: 0.3s ease-out;
+.navbar-brand img {
+    width: 3rem;
 }
+
+.navbar-nav {
+    margin: 0 40px;
+}
+
+.nav-link {
+    color: var(--white-text-color);
+}
+
+.nav-link:hover {
+    color: var(--brown-text-color);
+    transition: color 0.3s ease-in;
+}
+
+.navbar-nav .active-link {
+    color: var(--brown-text-color);
+}
+
+.nav-item i {
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
 
 .checkout_btn:hover {
     background-color: var(--brown-text-color);
@@ -79,6 +102,7 @@ thead {
     color: #F0F0F0;
     padding: 6px 30px;
     border-radius: 6px;
+    transition: 0.3s ease-out;
 }
 
 .main_nav {
@@ -130,32 +154,6 @@ thead {
 
 .card-text {
     font-size: 12px;
-}
-
-.navbar-brand img {
-    width: 3rem;
-}
-
-.navbar-nav {
-    margin: 0 40px;
-}
-
-.nav-link {
-    color: var(--white-text-color);
-}
-
-.nav-link:hover {
-    color: var(--brown-text-color);
-    transition: color 0.3s ease-in;
-}
-
-.navbar-nav .active-link {
-    color: var(--brown-text-color);
-}
-
-.nav-item i {
-    font-size: 1.5rem;
-    margin-right: 20px;
 }
 
 main {

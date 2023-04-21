@@ -183,4 +183,3 @@ function calculateTotal() {
 	totalProductPrice.innerHTML = `Your total is: <span class="js_total">$${totalPrice}</span>`;
 }
 checkoutButton.addEventListener("click", calculateTotal);
-
