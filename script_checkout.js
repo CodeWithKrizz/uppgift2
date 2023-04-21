@@ -105,7 +105,7 @@ function initShoppingList() {
 		checkoutCost[i].innerHTML = listItems[i].unit + listItems[i].price;
 	}
 }
-initShoppingList();
+initShoppingList(); // Kallar funktionen
 
 /* Den här koden definierar en funktion som heter updateLocalStorage(). Funktionen används för att uppdatera lagringsobjektet localStorage med aktuell räknare och antalet för varje objekt i inköpslistan.
 
@@ -131,7 +131,7 @@ function populateCheckout() {
 		checkoutQuantity[i].innerHTML = counters[i];
 	}
 }
-
+// Kallar funktioner
 populateCheckout();
 deleteEmptyRows();
 
@@ -168,7 +168,7 @@ function add() {
 		});
 	}
 }
-
+// Kallar på funktioner
 subtract();
 add();
 trashDelete();
