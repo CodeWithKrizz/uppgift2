@@ -1,6 +1,6 @@
 // JS-kod att utgå från i denna inlämningsuppgift
 const listItems = [
-	{
+	{ // Kamera 1
 		name: "Leica II",
 		id: "leica",
 		description:
@@ -8,7 +8,7 @@ const listItems = [
 		price: 27499,
 		unit: "$",
 	},
-	{
+	{  // Kamera 2
 		name: "Pronto",
 		id: "pronto",
 		description:
@@ -16,7 +16,7 @@ const listItems = [
 		price: 99,
 		unit: "$",
 	},
-	{
+	{ // Kamera 3
 		name: "Reflekta II",
 		id: "reflekta",
 		description:
@@ -24,7 +24,7 @@ const listItems = [
 		price: 2499,
 		unit: "$",
 	},
-	{
+	{ // Kamera 4
 		name: "Nikon D7500",
 		id: "nikon",
 		description:
@@ -32,7 +32,7 @@ const listItems = [
 		price: 1099,
 		unit: "$",
 	},
-	{
+	{  // Kamera 5
 		name: "Fujifilm X-10",
 		id: "fujifilm",
 		description:
@@ -40,7 +40,7 @@ const listItems = [
 		price: 449,
 		unit: "$",
 	},
-	{
+	{  // Kamera 6
 		name: "Canon",
 		id: "canon",
 		description:
