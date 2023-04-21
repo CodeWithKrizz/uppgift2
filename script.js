@@ -72,16 +72,24 @@ window.onload = function () {
 };
 // Slut på JS-koden från lärarna att utgå från.
 
-// Detta skapar en variabel med alla navigations länkar och loopar igenom dem. För varje klick på en länk, så ska en funktion kallas på som utför koden: att loopa igenom alla element och ta bort klassnamnet .active-link för varje gång en navlänk klickas på och sen ska samma klass läggas till på just den länken som det klickades på. På så sätt ser vi till så att bara ett element kan ha klassen .active-link åt gången. // Jessica
+// Varje element med klassen "nav-link" får en EventListener på "click" som tar bort klassen "active-link" från alla element i navLink-arrayen och lägger till den på det klickade elementet. 
+// Väljer alla element med klassen "nav-link" och lagrar dem i en variabel.
 let navLink = document.querySelectorAll(".nav-link");
+
+// Loopar igenom alla element i navLink-arrayen.
 for (let i = 0; i < navLink.length; i++) {
-	navLink[i].addEventListener("click", function () {
-		for (let j = 0; j < navLink.length; j++) {
-			navLink[j].classList.remove("active-link");
-		}
-		navLink[i].classList.add("active-link");
-	});
+    // Lägger till en klickhändelselyssnare till varje element i arrayen.
+    navLink[i].addEventListener("click", function () {
+        // Loopar igenom alla element i navLink-arrayen igen.
+        for (let j = 0; j < navLink.length; j++) {
+            // Tar bort klassen "active-link" från varje element i arrayen.
+            navLink[j].classList.remove("active-link");
+        }
+        // Lägger till klassen "active-link" till det klickade elementet.
+        navLink[i].classList.add("active-link");
+    });
 }
+
 
 // Hämtar HTML element och lagrar i variablar
 let btnAddToCart = document.querySelectorAll(".btn-add-to-cart");
@@ -104,7 +112,7 @@ for (let i = 0; i < counters.length; i++) {
 
 orderAmount.innerHTML = counter;
 
-// Funktion som lägger till EventListener för alla knappar med klassen "btnAddToCart" och uppdaterar varukorgen när en produkt läggs till.
+/* Funktion som lägger till EventListener för alla knappar med klassen "btnAddToCart" och uppdaterar varukorgen när en produkt läggs till */
 function updateCart() {
     // Loopar igenom alla knappar i btnAddToCart arrayen.
     for (let i = 0; i < btnAddToCart.length; i++) {
@@ -117,8 +125,7 @@ function updateCart() {
         });
     }
 }
-// Kallar på updateCart-funktionen för att lägga till EventListener för alla "Add to cart"-knappar.
-updateCart();
+updateCart(); // Kallar på updateCart-funktionen för att lägga till EventListener för alla "Add to cart"-knappar.
 
 // För varje element med klassen "bag", lägg till en EventListener för "click".
 document.querySelectorAll(".bag").forEach((link) => {

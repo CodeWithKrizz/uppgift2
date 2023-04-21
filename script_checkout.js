@@ -183,10 +183,10 @@ function deleteEmptyRows() {
 	}
 }
 
-/* Funktionen trashDelete lägger till en "click"-händelse på varje trash-knapp på sidan. När användaren klickar 
+/* Funktionen trashDelete lägger till en eventListerner för varje klick på varje trash-knapp på sidan. När man klickar 
 på knappen så minskas counter-variabeln med antalet produkter som representeras av counters[i] och counters[i] 
 sätts till 0. Sedan kallar funktionen populateCheckout för att uppdatera kundvagnen, orderAmount-elementet uppdateras 
-för att visa den nya antalet produkter och updateLocalStorage funktionen kallas för att uppdatera lokal lagring. 
+för att visa den nya antalet produkter och updateLocalStorage-funktionen kallas för att uppdatera lokal lagring. 
 Slutligen kallas deleteEmptyRows-funktionen för att ta bort eventuellt tomma rader från tabellen. */
 function trashDelete() {
 	for (let i = 0; i < trashButton.length; i++) {
@@ -222,6 +222,6 @@ function calculateTotal() {
 	totalProductPrice.innerHTML = `Your total is: <span class="js_total">$${totalPrice}</span>`;
 }
 
-/* Lägger till en händelselyssnare på knappen med id #checkoutButton. När knappen klickas på, kommer funktionen calculateTotal 
+/* Lägger till en eventListener på knappen med id #checkoutButton. När knappen klickas på kommer funktionen calculateTotal 
 att köras för att beräkna den totala kostnaden för produkterna i kundvagnen och uppdatera visningen på sidan. */
 checkoutButton.addEventListener("click", calculateTotal);
