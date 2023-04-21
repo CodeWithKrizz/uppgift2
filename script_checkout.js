@@ -68,18 +68,31 @@ let counter = localStorage.getItem("counter");
 let tableRows = document.querySelectorAll(".table tbody tr");
 let totalProductPrice = document.querySelector(".total-product-price");
 let counters = Array(inputNumber.length); //An array of counters, one counter for each button
-//localStorage.clear(); // Get values from local storage
+// localStorage.clear(); // Detta används för att rensa all data som finns lagrad i webbläsarens localStorage
 
+
+/* Den här koden utför en loop över ett antal element som heter inputNumber. Loopens längd bestäms av antalet element i inputNumber. Inuti loopen hämtas data från localStorage som är kopplad till varje element.
+
+För varje iteration av loopen hämtas en temporär variabel, temp, som innehåller värdet för counter + det aktuella indexet i. Detta betyder att localStorage söks efter variabelnamnet "counter" + i. Om det finns en sparad data i localStorage för den här variabeln, uppdateras värdet av counters[i] till det sparade värdet. Annars sätts counters[i] till 0.
+
+Detta används för att spara räknare för varje element i inputNumber. Genom att spara värdet i localStorage kan räknaren behållas även när användaren stänger ner webbläsaren och öppnar den igen. Vid en senare tidpunkt kan räknaren sedan hämtas från localStorage och användas för att uppdatera gränssnittet på webbsidan. */
 for (let i = 0; i < inputNumber.length; i++) {
 	let temp = localStorage.getItem("counter" + i);
 	if (temp != null) {
-		//If temp is not null, update the counter
+		// Om temp inte är tom, så ska counter uppdateras
 		counters[i] = temp;
 	} else {
 		counters[i] = 0;
 	}
 }
 
+/* Den här koden definierar en funktion som heter initShoppingList(). Funktionen används för att initialisera en inköpslista baserat på data som finns i listItems.
+
+För varje element i listItems loopar koden igenom och sätter antalet för det aktuella objektet till 0 i inköpslistan shoppingList. Därefter uppdateras HTML-koden för varje element i inköpslistan (cardTitle, cardText, checkoutProducts och checkoutCost) med relevant information från listItems.
+
+cardTitle och cardText uppdateras med produktens namn och beskrivning, medan checkoutProducts och checkoutCost uppdateras med produktens namn och pris. HTML-koden uppdateras också med enheten för prisets valuta (unit).
+
+Slutligen, efter att alla element i listItems har bearbetats, körs initShoppingList()-funktionen för att initialisera inköpslistan när sidan laddas. */
 function initShoppingList() {
 	for (let i = 0; i < listItems.length; i++) {
 		shoppingList[shoppingList.name] = 0;
@@ -94,6 +107,11 @@ function initShoppingList() {
 }
 initShoppingList();
 
+/* Den här koden definierar en funktion som heter updateLocalStorage(). Funktionen används för att uppdatera lagringsobjektet localStorage med aktuell räknare och antalet för varje objekt i inköpslistan.
+
+Först sparas den aktuella räknaren counter i localStorage med hjälp av setItem()-metoden och nyckelvärdet "counter".
+
+Därefter loopar koden igenom alla objekt i inköpslistan counters och sparar antalet för varje objekt i localStorage med hjälp av setItem()-metoden och nyckelvärdet "counter" + index i för det aktuella objektet i loopen. */
 function updateLocalStorage() {
 	localStorage.setItem("counter", counter);
 	for (let i = 0; i < counters.length; i++) {
@@ -103,6 +121,9 @@ function updateLocalStorage() {
 
 orderAmount.innerHTML = counter;
 
+/* Den här koden definierar en funktion som heter populateCheckout(). Funktionen används för att fylla i uppgifter i kassan med den aktuella mängden för varje objekt i inköpslistan.
+
+Koden börjar med en for-loop som itererar över varje objekt i inköpslistan genom att använda längden av inputNumber. Inuti loopen används attributmetoden setAttribute() för att sätta värdet av varje inputNumber-element till motsvarande räknare counters[i]. Därefter sätts innehållet i varje checkoutQuantity[i]-element till motsvarande räknare counters[i]. */
 function populateCheckout() {
 	for (let i = 0; i < inputNumber.length; i++) {
 		//console.log("here", counters[i]);
