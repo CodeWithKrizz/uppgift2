@@ -46,7 +46,7 @@ a {
 nav {
     background-color: #121212;
     color: var(--brown-text-color);
-    z-index: 1;
+    z-index: 3;
 }
 
 .navbar-brand img {
