@@ -1,6 +1,10 @@
+/* Den här koden deklarerar en array som kallas listItems som innehåller flera objekt som representerar olika kameramodeller. Varje objekt har fyra nyckel-värde-par: name, id, description, price och unit.
+
+Nyckeln name innehåller namnet på kameramodellen som en sträng. Nyckeln id innehåller en unik identifierare för kameramodellen. Nyckeln description innehåller en kort beskrivning av kameramodellen som en sträng. Nyckeln price innehåller priset på kameramodellen som en siffra. Slutligen innehåller nyckeln unit valutasymbolen för priset som en sträng. */
 // JS-kod att utgå från i denna inlämningsuppgift
 const listItems = [
-	{ // Kamera 1
+	{
+		// Kamera 1
 		name: "Leica II",
 		id: "leica",
 		description:
@@ -8,7 +12,8 @@ const listItems = [
 		price: 27499,
 		unit: "$",
 	},
-	{  // Kamera 2
+	{
+		// Kamera 2
 		name: "Pronto",
 		id: "pronto",
 		description:
@@ -16,7 +21,8 @@ const listItems = [
 		price: 99,
 		unit: "$",
 	},
-	{ // Kamera 3
+	{
+		// Kamera 3
 		name: "Reflekta II",
 		id: "reflekta",
 		description:
@@ -24,7 +30,8 @@ const listItems = [
 		price: 2499,
 		unit: "$",
 	},
-	{ // Kamera 4
+	{
+		// Kamera 4
 		name: "Nikon D7500",
 		id: "nikon",
 		description:
@@ -32,7 +39,8 @@ const listItems = [
 		price: 1099,
 		unit: "$",
 	},
-	{  // Kamera 5
+	{
+		// Kamera 5
 		name: "Fujifilm X-10",
 		id: "fujifilm",
 		description:
@@ -40,7 +48,8 @@ const listItems = [
 		price: 449,
 		unit: "$",
 	},
-	{  // Kamera 6
+	{
+		// Kamera 6
 		name: "Canon",
 		id: "canon",
 		description:
@@ -72,24 +81,23 @@ window.onload = function () {
 };
 // Slut på JS-koden från lärarna att utgå från.
 
-// Varje element med klassen "nav-link" får en EventListener på "click" som tar bort klassen "active-link" från alla element i navLink-arrayen och lägger till den på det klickade elementet. 
+// Varje element med klassen "nav-link" får en EventListener på "click" som tar bort klassen "active-link" från alla element i navLink-arrayen och lägger till den på det klickade elementet.
 // Väljer alla element med klassen "nav-link" och lagrar dem i en variabel.
 let navLink = document.querySelectorAll(".nav-link");
 
 // Loopar igenom alla element i navLink-arrayen.
 for (let i = 0; i < navLink.length; i++) {
-    // Lägger till en klickhändelselyssnare till varje element i arrayen.
-    navLink[i].addEventListener("click", function () {
-        // Loopar igenom alla element i navLink-arrayen igen.
-        for (let j = 0; j < navLink.length; j++) {
-            // Tar bort klassen "active-link" från varje element i arrayen.
-            navLink[j].classList.remove("active-link");
-        }
-        // Lägger till klassen "active-link" till det klickade elementet.
-        navLink[i].classList.add("active-link");
-    });
+	// Lägger till en klickhändelselyssnare till varje element i arrayen.
+	navLink[i].addEventListener("click", function () {
+		// Loopar igenom alla element i navLink-arrayen igen.
+		for (let j = 0; j < navLink.length; j++) {
+			// Tar bort klassen "active-link" från varje element i arrayen.
+			navLink[j].classList.remove("active-link");
+		}
+		// Lägger till klassen "active-link" till det klickade elementet.
+		navLink[i].classList.add("active-link");
+	});
 }
-
 
 // Hämtar HTML element och lagrar i variablar
 let btnAddToCart = document.querySelectorAll(".btn-add-to-cart");
@@ -114,38 +122,37 @@ orderAmount.innerHTML = counter;
 
 /* Funktion som lägger till EventListener för alla knappar med klassen "btnAddToCart" och uppdaterar varukorgen när en produkt läggs till */
 function updateCart() {
-    // Loopar igenom alla knappar i btnAddToCart arrayen.
-    for (let i = 0; i < btnAddToCart.length; i++) {
-        // Lägger till en EventListener för "click" för varje knapp i btnAddToCart-arrayen.
-        btnAddToCart[i].addEventListener("click", function () {
-            // Ökar counter (antal produkter i varukorgen) med 1 och uppdaterar orderAmount-elementet med det nya värdet.
-            orderAmount.innerHTML = ++counter;
-            // Ökar räknaren för den aktuella produkten (i) med 1.
-            counters[i]++;
-        });
-    }
+	// Loopar igenom alla knappar i btnAddToCart arrayen.
+	for (let i = 0; i < btnAddToCart.length; i++) {
+		// Lägger till en EventListener för "click" för varje knapp i btnAddToCart-arrayen.
+		btnAddToCart[i].addEventListener("click", function () {
+			// Ökar counter (antal produkter i varukorgen) med 1 och uppdaterar orderAmount-elementet med det nya värdet.
+			orderAmount.innerHTML = ++counter;
+			// Ökar räknaren för den aktuella produkten (i) med 1.
+			counters[i]++;
+		});
+	}
 }
 updateCart(); // Kallar på updateCart-funktionen för att lägga till EventListener för alla "Add to cart"-knappar.
 
 // För varje element med klassen "bag", lägg till en EventListener för "click".
 document.querySelectorAll(".bag").forEach((link) => {
-    // När användaren klickar på länken, körs denna funktion.
-    link.addEventListener("click", (e) => {
-        // Förhindrar att länken agerar som en vanlig länk och navigerar till en annan sida.
-        e.preventDefault();
-        // Sparar href-attributet från länkens parent-element i en variabel.
-        const url = e.target.parentElement.href;
+	// När användaren klickar på länken, körs denna funktion.
+	link.addEventListener("click", (e) => {
+		// Förhindrar att länken agerar som en vanlig länk och navigerar till en annan sida.
+		e.preventDefault();
+		// Sparar href-attributet från länkens parent-element i en variabel.
+		const url = e.target.parentElement.href;
 
-        // Lagrar counter (totalt antal produkter i varukorgen) i localStorage.
-        localStorage.setItem("counter", counter);
-        // Loopar igenom alla knappar i btnAddToCart-arrayen.
-        for (let i = 0; i < btnAddToCart.length; i++) {
-            // Lagrar varje produkts individuella räknare i localStorage med nyckeln "counter" + index.
-            localStorage.setItem("counter" + i, counters[i]);
-        } 
-        
-        // Navigerar till den ursprungliga länkadressen.
-        window.location.href = url;
-    });
+		// Lagrar counter (totalt antal produkter i varukorgen) i localStorage.
+		localStorage.setItem("counter", counter);
+		// Loopar igenom alla knappar i btnAddToCart-arrayen.
+		for (let i = 0; i < btnAddToCart.length; i++) {
+			// Lagrar varje produkts individuella räknare i localStorage med nyckeln "counter" + index.
+			localStorage.setItem("counter" + i, counters[i]);
+		}
+
+		// Navigerar till den ursprungliga länkadressen.
+		window.location.href = url;
+	});
 });
-
