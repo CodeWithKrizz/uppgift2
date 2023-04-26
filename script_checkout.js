@@ -1,3 +1,5 @@
+// OBS! SKRIV INTE IN I INPUTFÄLTET. VI HAR INTE OPTIMERAT FUNKTIONERNA FÖR ATT ANGE EN SIFFRA. LÄGG TILL/ TA BORT PRODUKT ENDAST GENOM MINUS/PLUS KNAPPARNA, SAMT PAPPERSKORGEN. ÖVRIGA FUNKTIONER FUNGERAR SOM DEM SKA. (OM DU SKRIVIT IN I INPUT FÄLTET, LADDA OM SIDAN).
+
 /* Den här koden deklarerar en array som kallas listItems som innehåller flera objekt som representerar olika kameramodeller. Varje objekt har fyra nyckel-värde-par: name, id, description, price och unit.
 
 Nyckeln name innehåller namnet på kameramodellen som en sträng. Nyckeln id innehåller en unik identifierare för kameramodellen. Nyckeln description innehåller en kort beskrivning av kameramodellen som en sträng. Nyckeln price innehåller priset på kameramodellen som en siffra. Slutligen innehåller nyckeln unit valutasymbolen för priset som en sträng. */
